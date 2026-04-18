@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bvwmpokxnargb"]
 
 [ext_resource type="PackedScene" uid="uid://ck52276utv3bl" path="res://Scenes/Generators/BasicBuilding.tscn" id="1_gv626"]
-[ext_resource type="Texture2D" uid="uid://b4j60tlsudbgk" path="res://Assets/Tilemap.png" id="2_o2xd8"]
+[ext_resource type="Texture2D" uid="uid://fx0het3sdby1" path="res://Assets/power_generator_atlas_texture.tres" id="2_o2xd8"]
 
 [node name="BasicBuilding" unique_id=738684379 instance=ExtResource("1_gv626")]
 Generator_time = 1.0
@@ -12,5 +12,4 @@ produces = {
 [node name="Sprite2D" parent="." index="0" unique_id=1718190438]
 scale = Vector2(2, 2)
 texture = ExtResource("2_o2xd8")
-region_enabled = true
 region_rect = Rect2(32, 0, 32, 32)

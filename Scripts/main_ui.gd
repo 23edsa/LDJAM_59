@@ -38,10 +38,10 @@ func _on_milestone_unlock_requested(milestone:MilestoneData):
 	var cost = milestone.resource_cost
 	
 	if resource_manager.resources.has(resource_type):
-		var current_amount = resource_manager.resource[resource_type]
+		var current_amount = resource_manager.resources[resource_type]
 
 		if current_amount >= cost:
-			resource_manager.resource[resource_type] -= cost
+			resource_manager.resources[resource_type] -= cost
 			print("milestone unlocked!")
 			unlock_building(milestone.building_to_unlock)
 		else: print("not enough resources!")

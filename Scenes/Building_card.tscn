@@ -28,7 +28,3 @@ size_flags_vertical = 3
 texture = ExtResource("1_lk0rr")
 expand_mode = 1
 stretch_mode = 5
-
-[node name="Upgrade_button" type="Button" parent="VBoxContainer" unique_id=1954255514]
-layout_mode = 2
-text = "Upgrade"
