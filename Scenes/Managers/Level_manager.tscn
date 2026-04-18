@@ -1,10 +1,8 @@
 [gd_scene format=3 uid="uid://ya0vo8hdwl5e"]
 
-[ext_resource type="PackedScene" uid="uid://1siemt0auyvy" path="res://Scenes/Generators/Sattelite_dish.tscn" id="1_3qxif"]
-[ext_resource type="PackedScene" uid="uid://cunnb06jkax3x" path="res://Scenes/Generators/Data_Center.tscn" id="2_xfg1f"]
+[ext_resource type="Script" uid="uid://bud8mc64awsq8" path="res://Scripts/level_manager.gd" id="1_3qxif"]
 
-[node name="LevelManager" type="Node2D" unique_id=2032184353]
-
-[node name="SatteliteDish" parent="." unique_id=521162183 instance=ExtResource("1_3qxif")]
-
-[node name="DataCenter" parent="." unique_id=769802270 instance=ExtResource("2_xfg1f")]
+[node name="LevelManager" type="Control" unique_id=1138278389]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3qxif")

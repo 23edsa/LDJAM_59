@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://jaxam4u7wajp" path="res://icon.svg" id="2_jh4fv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1chjn"]
+radius = 32.0
 
 [node name="SatteliteDish" type="Area2D" unique_id=961682294]
 script = ExtResource("1_1chjn")
@@ -11,12 +12,11 @@ script = ExtResource("1_1chjn")
 [node name="CollectionTimer" type="Timer" parent="." unique_id=815998562]
 autostart = true
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1169456237]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=102271918]
+shape = SubResource("CircleShape2D_1chjn")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=1169456237]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_jh4fv")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=102271918]
-scale = Vector2(5, 5)
-shape = SubResource("CircleShape2D_1chjn")
 
 [connection signal="timeout" from="CollectionTimer" to="." method="_on_collection_timer_timeout"]

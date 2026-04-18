@@ -8,11 +8,10 @@
 [ext_resource type="Resource" uid="uid://uvc1yfh2tgut" path="res://Scenes/Generators/Data_center.tres" id="6_vy5pj"]
 [ext_resource type="PackedScene" uid="uid://buqyim7fora5u" path="res://Scenes/Building_card.tscn" id="7_50glp"]
 [ext_resource type="Script" uid="uid://wtxo1lovjv5t" path="res://Scripts/Milestones/Milestone_data.gd" id="7_bmxlf"]
-[ext_resource type="Resource" uid="uid://bo6cwej2vm3x2" path="res://Scenes/Milestones/Milestone_01.tres" id="8_4kpch"]
+[ext_resource type="Resource" uid="uid://xraft4amxxud" path="res://Scenes/Milestones/test_milestone.tres" id="8_grg3l"]
 [ext_resource type="PackedScene" uid="uid://bg4c8rn6xo711" path="res://Scenes/Milestone_card.tscn" id="8_vy5pj"]
-[ext_resource type="Resource" uid="uid://lsa1o7wnb2od" path="res://Scenes/Milestones/Milestone_02.tres" id="9_frkhe"]
-[ext_resource type="Resource" uid="uid://dl8socjmaldus" path="res://Scenes/Milestones/Milestone_03.tres" id="10_1p5hy"]
 [ext_resource type="PackedScene" uid="uid://dbcp3x4ql3s5l" path="res://Scenes/Managers/Resource_manager.tscn" id="11_4kpch"]
+[ext_resource type="PackedScene" uid="uid://ya0vo8hdwl5e" path="res://Scenes/Managers/Level_manager.tscn" id="14_1p5hy"]
 
 [node name="Main" type="Node2D" unique_id=1727471405]
 script = ExtResource("1_idj7w")
@@ -20,7 +19,7 @@ script = ExtResource("1_idj7w")
 [node name="MainUI" type="CanvasLayer" parent="." unique_id=1331611584]
 script = ExtResource("2_kln2b")
 all_buildings = Array[ExtResource("3_v1gob")]([ExtResource("4_jw32o"), ExtResource("5_50glp"), ExtResource("6_vy5pj")])
-all_milestones = Array[ExtResource("7_bmxlf")]([ExtResource("8_4kpch"), ExtResource("9_frkhe"), ExtResource("10_1p5hy")])
+all_milestones = Array[ExtResource("7_bmxlf")]([ExtResource("8_grg3l")])
 building_card_scene = ExtResource("7_50glp")
 milestone_card_scene = ExtResource("8_vy5pj")
 
@@ -55,6 +54,11 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 7.0
+
+[node name="LevelManager" parent="MainUI/Background/MilestoneSplit/LeftSide/LevelManagerPanel" unique_id=1906808401 instance=ExtResource("14_1p5hy")]
+z_index = 1000
+z_as_relative = false
+layout_mode = 2
 
 [node name="BuildingsManagerPanel" type="PanelContainer" parent="MainUI/Background/MilestoneSplit/LeftSide" unique_id=1879855909]
 layout_mode = 2
