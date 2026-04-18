@@ -15,4 +15,4 @@ func setup(milestone):
 
 func _on_button_pressed():
 	unlock_requested.emit(my_milestone)
-	#c
+	#clear test
