@@ -46,5 +46,9 @@ func on_clicked():
 func upgrade():
 	pass
 	
+func _process(delta):
+	
+	$ProgressBar.value = remap($GeneratorTimer.time_left,Generator_time, 0, 0, 100)
+	
 	
 	
