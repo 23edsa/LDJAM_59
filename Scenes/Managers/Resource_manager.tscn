@@ -4,3 +4,31 @@
 
 [node name="ResourceManager" type="Node2D" unique_id=229041560]
 script = ExtResource("1_e2jj5")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1441814083]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -118.0
+offset_top = -11.5
+offset_right = 501.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Data_Label" type="Label" parent="HBoxContainer" unique_id=1217239303]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Raw data: 0"
+
+[node name="Money_Label" type="Label" parent="HBoxContainer" unique_id=1063718185]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Money: 0"
+
+[node name="Power_Label" type="Label" parent="HBoxContainer" unique_id=326821905]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Power: 0"

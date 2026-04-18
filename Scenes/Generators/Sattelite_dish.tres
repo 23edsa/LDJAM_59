@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="BuildingData" format=3 uid="uid://gwx2pc13ngnq"]
 
 [ext_resource type="Script" uid="uid://sf8jcwrbdtyx" path="res://Scripts/Generators/Building_data.gd" id="1_b3lga"]
-[ext_resource type="PackedScene" uid="uid://1siemt0auyvy" path="res://Scenes/Generators/Sattelite_dish.tscn" id="1_i1nxv"]
+[ext_resource type="PackedScene" uid="uid://3xrqqbbp3efb" path="res://Scenes/Generators/basic_data_generator.tscn" id="1_i1nxv"]
 [ext_resource type="Texture2D" uid="uid://jaxam4u7wajp" path="res://icon.svg" id="1_okirs"]
 
 [resource]

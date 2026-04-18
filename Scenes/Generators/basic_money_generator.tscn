@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://qw47tltfhfh4"]
+
+[ext_resource type="PackedScene" uid="uid://ck52276utv3bl" path="res://Scenes/Generators/BasicBuilding.tscn" id="1_t25se"]
+
+[node name="Basic_money_generator" unique_id=738684379 instance=ExtResource("1_t25se")]
+Generator_time = 0.3
+click_boost_amount = 0.1
+produces = {
+"money": 10
+}

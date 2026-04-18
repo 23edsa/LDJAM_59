@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ck52276utv3bl"]
+
+[ext_resource type="Texture2D" uid="uid://jaxam4u7wajp" path="res://icon.svg" id="1_i65ha"]
+[ext_resource type="Script" uid="uid://dpfr00x340dam" path="res://Scripts/basic_building.gd" id="1_rsrgo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rsrgo"]
+size = Vector2(64, 64)
+
+[node name="BasicBuilding" type="Area2D" unique_id=738684379]
+script = ExtResource("1_rsrgo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1718190438]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_i65ha")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=930508717]
+shape = SubResource("RectangleShape2D_rsrgo")
+
+[node name="GeneratorTimer" type="Timer" parent="." unique_id=1090020724]

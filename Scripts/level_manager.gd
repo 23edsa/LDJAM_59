@@ -1,5 +1,6 @@
 extends Control
 
+@export var resource_manager:Node2D
 @export var grid_size = Vector2(64,64)
 var occupied_cells:Dictionary = {}
 
@@ -33,6 +34,10 @@ func _drop_data(at_position, data):
 	var building_data = data as BuildingData
 	var target_grid_position = get_grid_position(at_position)
 	var new_building = building_data.building_scene.instantiate()
+	if resource_manager != null:
+		new_building.resource_transaction_requested.connect(resource_manager.process_building_transaction)
+	else:
+		push_error("You forgot to assign the Resource Manager in the Level Manager inspector!")
 	add_child(new_building)
 	new_building.position = target_grid_position + (grid_size / 2.0)
 	occupied_cells[target_grid_position] = new_building

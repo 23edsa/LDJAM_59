@@ -51,14 +51,16 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="ResourceManager" parent="MainUI/Background/MilestoneSplit/LeftSide/ResourcePanel" unique_id=229041560 instance=ExtResource("11_4kpch")]
+position = Vector2(234, 39)
 
 [node name="LevelManagerPanel" type="PanelContainer" parent="MainUI/Background/MilestoneSplit/LeftSide" unique_id=1430636456]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 7.0
 
-[node name="NewLevelManager" parent="MainUI/Background/MilestoneSplit/LeftSide/LevelManagerPanel" unique_id=1456458300 instance=ExtResource("12_grg3l")]
+[node name="NewLevelManager" parent="MainUI/Background/MilestoneSplit/LeftSide/LevelManagerPanel" unique_id=1456458300 node_paths=PackedStringArray("resource_manager") instance=ExtResource("12_grg3l")]
 layout_mode = 2
+resource_manager = NodePath("../../ResourcePanel/ResourceManager")
 
 [node name="BuildingsManagerPanel" type="PanelContainer" parent="MainUI/Background/MilestoneSplit/LeftSide" unique_id=1879855909]
 layout_mode = 2
