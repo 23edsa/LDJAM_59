@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://jaxam4u7wajp" path="res://icon.svg" id="1_covn5"]
 [ext_resource type="Script" uid="uid://sf8jcwrbdtyx" path="res://Scripts/Generators/Building_data.gd" id="1_j2qxe"]
-[ext_resource type="PackedScene" uid="uid://cunnb06jkax3x" path="res://Scenes/Generators/Data_Center.tscn" id="1_qb0x5"]
+[ext_resource type="PackedScene" uid="uid://c4gr3d4oxy77v" path="res://Scenes/Generators/new_data_center.tscn" id="1_qb0x5"]
 
 [resource]
 script = ExtResource("1_j2qxe")
@@ -10,8 +10,5 @@ id = "basic_data_center"
 display_name = "Basic Data Center"
 icon = ExtResource("1_covn5")
 building_scene = ExtResource("1_qb0x5")
-<<<<<<< Updated upstream
 initially_unlocked = true
-=======
->>>>>>> Stashed changes
 metadata/_custom_type_script = "uid://sf8jcwrbdtyx"

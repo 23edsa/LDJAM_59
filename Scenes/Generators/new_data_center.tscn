@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c4gr3d4oxy77v"]
+
+[ext_resource type="Script" path="res://Scripts/Generators/data_center.gd" id="1_msot6"]
+[ext_resource type="Texture2D" uid="uid://jaxam4u7wajp" path="res://icon.svg" id="2_e1sc8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cdsba"]
+size = Vector2(64, 64)
+
+[node name="NewDataCenter" type="Area2D" unique_id=369434676]
+script = ExtResource("1_msot6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1829563764]
+shape = SubResource("RectangleShape2D_cdsba")
+
+[node name="ProcessTimer" type="Timer" parent="." unique_id=517910515]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=4198082]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_e1sc8")
