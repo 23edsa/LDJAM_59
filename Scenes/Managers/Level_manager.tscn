@@ -1,8 +1,24 @@
 [gd_scene format=3 uid="uid://ya0vo8hdwl5e"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://bud8mc64awsq8" path="res://Scripts/level_manager.gd" id="1_3qxif"]
 
 [node name="LevelManager" type="Control" unique_id=1138278389]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_3qxif")
+=======
+[ext_resource type="PackedScene" uid="uid://1siemt0auyvy" path="res://Scenes/Generators/Sattelite_dish.tscn" id="1_3qxif"]
+[ext_resource type="PackedScene" uid="uid://cunnb06jkax3x" path="res://Scenes/Generators/Data_Center.tscn" id="2_xfg1f"]
+[ext_resource type="PackedScene" uid="uid://dgurwr7nfq8c8" path="res://Scenes/Generators/Battery.tscn" id="3_ar8f0"]
+
+[node name="LevelManager" type="Node2D" unique_id=2032184353]
+
+[node name="SatteliteDish" parent="." unique_id=521162183 instance=ExtResource("1_3qxif")]
+
+[node name="DataCenter" parent="." unique_id=769802270 instance=ExtResource("2_xfg1f")]
+
+[node name="Battery" parent="." unique_id=423188702 instance=ExtResource("3_ar8f0")]
+
+[node name="Battery2" parent="." unique_id=443769566 instance=ExtResource("3_ar8f0")]
+>>>>>>> Stashed changes

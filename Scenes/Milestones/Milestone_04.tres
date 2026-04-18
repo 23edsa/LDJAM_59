@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MilestoneData" format=3 uid="uid://dwtbovpnktvj5"]
+
+[ext_resource type="Script" uid="uid://wtxo1lovjv5t" path="res://Scripts/Milestones/Milestone_data.gd" id="1_jvepf"]
+
+[resource]
+script = ExtResource("1_jvepf")
+id = "4"
+display_name = "Build a Deep Space Antenna"
+resource_cost = 300
+resource_type = "money"
+metadata/_custom_type_script = "uid://wtxo1lovjv5t"

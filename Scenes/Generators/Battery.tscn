@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 [gd_scene format=3 uid="uid://c6l4b6haqpad2"]
 
 [ext_resource type="Script" path="res://Scripts/Generators/signal_buffer.gd" id="1_3d0mk"]
+=======
+[gd_scene format=3 uid="uid://dgurwr7nfq8c8"]
+
+[ext_resource type="Script" uid="uid://bu7m6qi8y422e" path="res://Scripts/Generators/signal_buffer.gd" id="1_3d0mk"]
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ggwsy"]
 

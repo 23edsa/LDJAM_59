@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 [gd_scene format=3 uid="uid://c5vpmcuvddqxs"]
 
 [ext_resource type="Script" path="res://Scripts/Generators/cooling_station.gd" id="1_w1fbr"]
+=======
+[gd_scene format=3 uid="uid://d11xdoxmei22k"]
+
+[ext_resource type="Script" uid="uid://bq23hubl1xsnq" path="res://Scripts/Generators/cooling_station.gd" id="1_w1fbr"]
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5lv5p"]
 

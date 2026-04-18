@@ -10,5 +10,8 @@ id = "basic_data_center"
 display_name = "Basic Data Center"
 icon = ExtResource("1_covn5")
 building_scene = ExtResource("1_qb0x5")
+<<<<<<< Updated upstream
 initially_unlocked = true
+=======
+>>>>>>> Stashed changes
 metadata/_custom_type_script = "uid://sf8jcwrbdtyx"

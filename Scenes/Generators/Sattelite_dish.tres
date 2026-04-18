@@ -7,7 +7,7 @@
 [resource]
 script = ExtResource("1_b3lga")
 id = "basic_sattelite_dish"
-display_name = "Basic deep space antenna"
+display_name = "Basic satellite dish"
 icon = ExtResource("1_okirs")
 building_scene = ExtResource("1_i1nxv")
 initially_unlocked = true
