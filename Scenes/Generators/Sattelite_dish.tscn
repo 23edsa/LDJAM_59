@@ -1,3 +1,6 @@
 [gd_scene format=3 uid="uid://1siemt0auyvy"]
 
+[ext_resource type="Script" uid="uid://cpjpk0hh780aq" path="res://Scripts/Generators/sattelite_dish.gd" id="1_1chjn"]
+
 [node name="SatteliteDish" type="Node2D" unique_id=521162183]
+script = ExtResource("1_1chjn")
