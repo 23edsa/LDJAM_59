@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c6l4b6haqpad2"]
+
+[ext_resource type="Script" path="res://Scripts/Generators/signal_buffer.gd" id="1_3d0mk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ggwsy"]
+
+[node name="Battery" type="Area2D" unique_id=423188702]
+script = ExtResource("1_3d0mk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=137055508]
+shape = SubResource("RectangleShape2D_ggwsy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1558534948]
