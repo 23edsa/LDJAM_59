@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://3xrqqbbp3efb"]
 
 [ext_resource type="PackedScene" uid="uid://ck52276utv3bl" path="res://Scenes/Generators/BasicBuilding.tscn" id="1_es0l0"]
+[ext_resource type="Texture2D" uid="uid://b4j60tlsudbgk" path="res://Assets/Tilemap.png" id="2_ehdky"]
 
 [node name="Basic_Data_generator" unique_id=738684379 instance=ExtResource("1_es0l0")]
 produces = {
@@ -9,3 +10,9 @@ produces = {
 consumes = {
 "power": 100.0
 }
+
+[node name="Sprite2D" parent="." index="0" unique_id=1718190438]
+scale = Vector2(2, 2)
+texture = ExtResource("2_ehdky")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)

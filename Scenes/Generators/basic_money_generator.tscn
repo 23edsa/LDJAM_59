@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://qw47tltfhfh4"]
 
 [ext_resource type="PackedScene" uid="uid://ck52276utv3bl" path="res://Scenes/Generators/BasicBuilding.tscn" id="1_t25se"]
+[ext_resource type="Texture2D" uid="uid://b4j60tlsudbgk" path="res://Assets/Tilemap.png" id="2_kcgl2"]
 
 [node name="Basic_money_generator" unique_id=738684379 instance=ExtResource("1_t25se")]
 Generator_time = 0.3
@@ -8,3 +9,12 @@ click_boost_amount = 0.1
 produces = {
 "money": 10
 }
+consumes = {
+"raw_data": 10
+}
+
+[node name="Sprite2D" parent="." index="0" unique_id=1718190438]
+scale = Vector2(2, 2)
+texture = ExtResource("2_kcgl2")
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
