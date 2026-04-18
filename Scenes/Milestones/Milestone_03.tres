@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MilestoneData" format=3 uid="uid://dl8socjmaldus"]
+
+[ext_resource type="Resource" uid="uid://uvc1yfh2tgut" path="res://Scenes/Generators/Data_center.tres" id="1_x2eyd"]
+[ext_resource type="Script" uid="uid://wtxo1lovjv5t" path="res://Scripts/Milestones/Milestone_data.gd" id="1_x3qsf"]
+
+[resource]
+script = ExtResource("1_x3qsf")
+id = "3"
+display_name = "Build a Data Center"
+resource_cost = 300
+resource_type = "money"
+building_to_unlock = ExtResource("1_x2eyd")
+metadata/_custom_type_script = "uid://wtxo1lovjv5t"

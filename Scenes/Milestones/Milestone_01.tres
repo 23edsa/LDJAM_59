@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MilestoneData" format=3 uid="uid://bo6cwej2vm3x2"]
+
+[ext_resource type="Resource" uid="uid://bcowa6f5tuqbq" path="res://Scenes/Generators/Power_generator.tres" id="1_o4n2i"]
+[ext_resource type="Script" uid="uid://wtxo1lovjv5t" path="res://Scripts/Milestones/Milestone_data.gd" id="1_ow6ik"]
+
+[resource]
+script = ExtResource("1_ow6ik")
+id = "1"
+display_name = "Build a powerplant"
+resource_cost = 1000
+resource_type = "money"
+building_to_unlock = ExtResource("1_o4n2i")
+metadata/_custom_type_script = "uid://wtxo1lovjv5t"

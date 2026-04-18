@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="BuildingData" format=3 uid="uid://bcowa6f5tuqbq"]
+
+[ext_resource type="Script" uid="uid://sf8jcwrbdtyx" path="res://Scripts/Generators/Building_data.gd" id="1_3syaj"]
+[ext_resource type="Texture2D" uid="uid://jaxam4u7wajp" path="res://icon.svg" id="1_yqy36"]
+
+[resource]
+script = ExtResource("1_3syaj")
+id = "basic_power"
+display_name = "Basic Power Generator"
+icon = ExtResource("1_yqy36")
+metadata/_custom_type_script = "uid://sf8jcwrbdtyx"

@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://buqyim7fora5u"]
+
+[ext_resource type="Texture2D" uid="uid://jaxam4u7wajp" path="res://icon.svg" id="1_lk0rr"]
+[ext_resource type="Script" uid="uid://diejoevr45pdr" path="res://Scripts/building_card.gd" id="1_tdalb"]
+[ext_resource type="Resource" uid="uid://gwx2pc13ngnq" path="res://Scenes/Generators/Sattelite_dish.tres" id="2_qxp7w"]
+
+[node name="BuildingCard" type="Control" unique_id=1792135196]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_tdalb")
+my_building_data = ExtResource("2_qxp7w")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=493827966]
+layout_mode = 1
+offset_right = 85.0
+offset_bottom = 112.0
+
+[node name="Building_name" type="Label" parent="VBoxContainer" unique_id=120425369]
+layout_mode = 2
+text = "Name"
+horizontal_alignment = 1
+
+[node name="Building_icon" type="TextureRect" parent="VBoxContainer" unique_id=1116128269]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_lk0rr")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Ugrade_button" type="Button" parent="VBoxContainer" unique_id=1954255514]
+layout_mode = 2
+text = "Upgrade"
