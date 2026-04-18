@@ -1,6 +1,22 @@
 [gd_scene format=3 uid="uid://1siemt0auyvy"]
 
 [ext_resource type="Script" uid="uid://cpjpk0hh780aq" path="res://Scripts/Generators/sattelite_dish.gd" id="1_1chjn"]
+[ext_resource type="Texture2D" uid="uid://jaxam4u7wajp" path="res://icon.svg" id="2_jh4fv"]
 
-[node name="SatteliteDish" type="Node2D" unique_id=521162183]
+[sub_resource type="CircleShape2D" id="CircleShape2D_1chjn"]
+
+[node name="SatteliteDish" type="Area2D" unique_id=961682294]
 script = ExtResource("1_1chjn")
+
+[node name="CollectionTimer" type="Timer" parent="." unique_id=815998562]
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1169456237]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_jh4fv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=102271918]
+scale = Vector2(5, 5)
+shape = SubResource("CircleShape2D_1chjn")
+
+[connection signal="timeout" from="CollectionTimer" to="." method="_on_collection_timer_timeout"]

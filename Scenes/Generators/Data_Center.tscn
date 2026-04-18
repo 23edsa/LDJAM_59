@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cunnb06jkax3x"]
+
+[ext_resource type="Texture2D" uid="uid://jaxam4u7wajp" path="res://icon.svg" id="1_8dr8s"]
+[ext_resource type="Script" uid="uid://dj1cg7t0o6kk3" path="res://Scenes/Generators/data_center.gd" id="1_dbyql"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_up2k1"]
+
+[node name="DataCenter" type="Area2D" unique_id=769802270]
+script = ExtResource("1_dbyql")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1278881184]
+shape = SubResource("RectangleShape2D_up2k1")
+
+[node name="ProcessTimer" type="Timer" parent="." unique_id=30683586]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1889640608]
+texture = ExtResource("1_8dr8s")
+
+[connection signal="timeout" from="ProcessTimer" to="." method="_on_process_timer_timeout"]
