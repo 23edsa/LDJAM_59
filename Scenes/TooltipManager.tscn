@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://d07iyqv27tfl2"]
+
+[ext_resource type="Script" uid="uid://pomwnfecfj81" path="res://Scripts/TooltipManager.gd" id="1_86yj7"]
+
+[node name="TooltipManager" type="CanvasLayer" unique_id=774387738]
+script = ExtResource("1_86yj7")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=684465407]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=816067277]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer" unique_id=1378197091]
+layout_mode = 2

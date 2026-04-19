@@ -6,6 +6,7 @@ var occupied_cells:Dictionary = {}
 var moving_building_data:Dictionary = {}
 
 var ghost_preview:TextureRect
+var current_hovered_cell: Vector2 = Vector2(-999, -999)
 
 func _ready():
 	ghost_preview = TextureRect.new()
@@ -61,6 +62,7 @@ func _drop_data(at_position, data):
 			new_building.resource_transaction_requested.connect(resource_manager.process_building_transaction)
 			new_building.resource_manager = resource_manager
 			new_building.refund_value = building_data.building_cost
+			new_building.display_name = building_data.display_name
 		add_child(new_building)
 		new_building.position = target_grid_pos
 		occupied_cells[target_grid_pos] = new_building
@@ -96,6 +98,7 @@ func _notification(what: int) -> void:
 			
 			building.queue_free()
 			moving_building_data = {}
+		TooltipManager.hide_tooltip()
 			
 func _get_drag_data(at_positon:Vector2):
 	var grid_pos = get_grid_position(at_positon)
@@ -119,8 +122,9 @@ func _get_drag_data(at_positon:Vector2):
 		
 		return moving_building_data
 	update_local_adjacencies(grid_pos)
+	TooltipManager.hide_tooltip()
 	return null
-		
+	
 
 func _process(_delta: float) -> void:
 	if ghost_preview != null and ghost_preview.visible:
@@ -128,6 +132,25 @@ func _process(_delta: float) -> void:
 		var manager_bounds = Rect2(Vector2.ZERO, size)
 		if not manager_bounds.has_point(local_mouse):
 			ghost_preview.visible = false
+	if ghost_preview != null and not ghost_preview.visible:
+		var local_mouse = get_local_mouse_position()
+		var manager_bounds = Rect2(Vector2.ZERO, size)
+		if manager_bounds.has_point(local_mouse):
+			var grid_pos = get_grid_position(local_mouse)
+			if grid_pos != current_hovered_cell:
+				current_hovered_cell = grid_pos
+				
+				if occupied_cells.has(grid_pos):
+					var building = occupied_cells[grid_pos]
+					if building.has_method("get_tooltip_text"):
+						TooltipManager.show_tooltip(building.get_tooltip_text())
+				else: TooltipManager.hide_tooltip()
+		else:
+			# The mouse left the Level Manager completely
+			if current_hovered_cell != Vector2(-999, -999):
+				current_hovered_cell = Vector2(-999, -999)
+				TooltipManager.hide_tooltip()
+
 
 func update_local_adjacencies(center_pos:Vector2):
 	

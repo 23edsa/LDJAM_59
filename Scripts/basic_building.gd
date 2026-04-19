@@ -22,6 +22,7 @@ var active_affectors_count:int = 0
 var resource_manager:Node2D
 var is_working:bool = false
 var refund_value:float = 0
+var display_name: String = ""
 
 
 
@@ -34,6 +35,7 @@ var upgrade_cost
 
 @onready var timer = $GeneratorTimer
 var retry_timer:Timer
+var tooltip_timer:Timer
 @export var retry_timer_period:float = 1.0
 
 func _ready():
@@ -51,6 +53,8 @@ func _ready():
 	timer.start()
 	timer.one_shot = true
 	$AdjacencyLabel.visible = false
+	
+
 
 func calculate_adjacency(neighbor_names:Array):
 	current_prod_mod = 1.0
@@ -105,7 +109,7 @@ func _on_generator_timer_timeout():
 		var actual_produces ={}
 		for key in produces.keys():
 			actual_produces[key] = produces[key]*current_prod_mod
-			print(actual_produces[key])
+			#print(actual_produces[key])
 
 		resource_manager.produce_resources(actual_produces)
 
@@ -133,5 +137,37 @@ func _process(delta):
 	else:
 		$ProgressBar.value = 0
 
+
+#tooltip functionality:
+
+func get_tooltip_text() -> String:
+	var text = "[ " + display_name + " ]\n"
 	
+	if not produces.is_empty():
+		text += "\nProduces:\n"
+		for key in produces.keys():
+			text += " + " + str(produces[key]) + " " + key + "\n"
+			
+	if not consumes.is_empty():
+		text += "\nConsumes:\n"
+		for key in consumes.keys():
+			text += " - " + str(consumes[key]) + " " + key + "\n"
+			
+	if not adjacency_rules.is_empty():
+		text += "\nAffects Neighbors:\n"
+		for neighbor in adjacency_rules.keys():
+			var rules = adjacency_rules[neighbor]
+			text += " > " + neighbor + ": "
+			if rules.has("prod_mod") and rules["prod_mod"] != 1.0:
+				text += "Productivity x" + str(rules["prod_mod"]) + " "
+			if rules.has("cons_mod") and rules["cons_mod"] !=1.0:
+				text += "Consumption x" + str(rules["cons_mod"]) + " "
+			if rules.has("speed_mod")and rules["speed_mod"] != 1.0:
+				text += "Speed x" + str(rules["speed_mod"])
+			text += "\n"
+			
+	return text
 	
+
+func _exit_tree():
+	TooltipManager.hide_tooltip()
