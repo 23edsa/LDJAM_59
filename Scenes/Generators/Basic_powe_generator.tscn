@@ -4,7 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://fx0het3sdby1" path="res://Assets/power_generator_atlas_texture.tres" id="2_o2xd8"]
 
 [node name="BasicBuilding" unique_id=738684379 instance=ExtResource("1_gv626")]
+building_name = "powerplant"
 Generator_time = 1.0
+adjacency_rules = {
+"powerplant": {
+"prod_mod": 1.13,
+"speed_mod": 1.0
+}
+}
 produces = {
 "power": 10.0
 }

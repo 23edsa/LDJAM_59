@@ -74,6 +74,7 @@ func _drop_data(at_position, data):
 		
 		moving_building_data = {}
 	
+	update_local_adjacencies(target_grid_pos)
 	ghost_preview.visible = false
 	
 	
@@ -117,6 +118,7 @@ func _get_drag_data(at_positon:Vector2):
 		set_drag_preview(invis_preview)
 		
 		return moving_building_data
+	update_local_adjacencies(grid_pos)
 	return null
 		
 
@@ -126,3 +128,26 @@ func _process(_delta: float) -> void:
 		var manager_bounds = Rect2(Vector2.ZERO, size)
 		if not manager_bounds.has_point(local_mouse):
 			ghost_preview.visible = false
+
+func update_local_adjacencies(center_pos:Vector2):
+	
+	var directions = [Vector2(0,-grid_size.y), Vector2(0,grid_size.y),
+	Vector2(-grid_size.x,0),Vector2(grid_size.x,0)]
+	
+	var cells_to_update = [center_pos]
+	for dir in directions:
+		cells_to_update.append(center_pos+dir)
+	
+	for pos in cells_to_update:
+		if occupied_cells.has(pos):
+			var building = occupied_cells[pos]
+
+			var my_neighbors = []
+			for dir in directions:
+				var neighbor_pos = pos+dir
+				if occupied_cells.has(neighbor_pos):
+					my_neighbors.append(occupied_cells[neighbor_pos].building_name)
+					
+
+			if building.has_method("calculate_adjacency"):
+				building.calculate_adjacency(my_neighbors)

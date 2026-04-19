@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bw8tpgoj38hki" path="res://Assets/Sat_dish_atlas_texture.tres" id="2_ehdky"]
 
 [node name="Basic_Data_generator" unique_id=738684379 instance=ExtResource("1_es0l0")]
+building_name = "sattelite_dish"
 produces = {
 "raw_data": 10.0
 }

@@ -30,3 +30,9 @@ mouse_filter = 2
 rounded = true
 fill_mode = 3
 show_percentage = false
+
+[node name="AdjacencyLabel" type="Label" parent="." unique_id=507095415]
+offset_left = -32.0
+offset_top = -32.0
+offset_right = -31.0
+offset_bottom = -9.0

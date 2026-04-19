@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b2jueik0iwjok" path="res://Assets/data_center_atlas_texture.tres" id="2_kcgl2"]
 
 [node name="Basic_money_generator" unique_id=738684379 instance=ExtResource("1_t25se")]
+building_name = "datacenter"
 Generator_time = 0.3
 click_boost_amount = 0.1
 produces = {

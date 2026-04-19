@@ -5,6 +5,16 @@ class_name BasicBuilding
 @export var building_name:String = "Basic Building"
 @export var Generator_time:float = 5.0
 @export var click_boost_amount:float = 0.5
+#Structure for adjacency bonuses 
+#{ "NeighborName": {"prod_mod": 1.5, "cons_mod": 1.2, "speed_mod": 0.8} }
+@export var adjacency_rules: Dictionary = {}
+
+var current_prod_mod:float = 1.0
+var current_cons_mod:float = 1.0
+var current_speed_mod:float = 1.0
+var active_affectors_count:int = 0
+
+
 
 # Keys should be Strings (e.g., "power"), Values should be Numbers (e.g., 5)
 @export var produces: Dictionary = {"money": 0}
@@ -12,6 +22,7 @@ class_name BasicBuilding
 var resource_manager:Node2D
 var is_working:bool = false
 var refund_value:float = 0
+
 
 
 signal resource_transaction_requested(consume_dict:Dictionary, produce_dict:Dictionary)
@@ -39,14 +50,47 @@ func _ready():
 	timer.wait_time = Generator_time
 	timer.start()
 	timer.one_shot = true
+	$AdjacencyLabel.visible = false
 
+func calculate_adjacency(neighbor_names:Array):
+	current_prod_mod = 1.0
+	current_cons_mod = 1.0
+	current_speed_mod = 1.0
+	active_affectors_count = 0
+	
+	for neighbor in neighbor_names:
+		if adjacency_rules.has(neighbor):
+			var rules = adjacency_rules[neighbor]
+			if rules.has("prod_mod"): current_prod_mod *= rules["prod_mod"]
+			if rules.has("cons_mod"): current_cons_mod *= rules["cons_mod"]
+			if rules.has("speed_mod"): current_speed_mod *= rules["speed_mod"]
+			active_affectors_count += 1
+	var new_wait_time = max(0.01, Generator_time*current_speed_mod)
+	if timer.wait_time != new_wait_time:
+		var time_left_ratio = 0.0
+		if timer.wait_time > 0:
+			time_left_ratio = timer.time_left / timer.wait_time
+		timer.wait_time = new_wait_time
+		if is_working and timer.time_left > 0:
+			timer.start(timer.wait_time * time_left_ratio)
+	if active_affectors_count >0:
+		$AdjacencyLabel.visible = true
+		$AdjacencyLabel.text = str(active_affectors_count)
+	if active_affectors_count == 0:
+		$AdjacencyLabel.visible = false
+		
 func try_start_generation():
 	if resource_manager == null:
 		return
 		
-	if consumes.is_empty() or resource_manager.try_consume(consumes):
+	var actual_consumes = {}
+	for key in consumes.keys():
+		actual_consumes[key] = consumes[key]*current_cons_mod
+	
+	
+	if actual_consumes.is_empty() or resource_manager.try_consume(actual_consumes):
 		is_working = true
-		timer.start(Generator_time)
+		timer.start(timer.wait_time)
 	else:
 		is_working = false
 		timer.stop()
@@ -54,20 +98,20 @@ func try_start_generation():
 	
 
 func _on_generator_timer_timeout():
-	#generate_resources()
-	#timer.start(Generator_time)
 	if not is_working:
 		return
 		
 	if resource_manager != null and not produces.is_empty():
-		resource_manager.produce_resources(produces)
-	
+		var actual_produces ={}
+		for key in produces.keys():
+			actual_produces[key] = produces[key]*current_prod_mod
+			print(actual_produces[key])
+
+		resource_manager.produce_resources(actual_produces)
+
 	is_working = false
-	
 	try_start_generation()
 	
-func generate_resources():
-	resource_transaction_requested.emit(consumes, produces)
 
 
 func _input_event(viewport, event, shape_idx):
@@ -88,5 +132,6 @@ func _process(delta):
 		$ProgressBar.value = remap($GeneratorTimer.time_left,Generator_time, 0, 0, 100)
 	else:
 		$ProgressBar.value = 0
+
 	
 	
