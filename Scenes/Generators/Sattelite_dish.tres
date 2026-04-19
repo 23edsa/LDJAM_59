@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" uid="uid://sf8jcwrbdtyx" path="res://Scripts/Generators/Building_data.gd" id="1_b3lga"]
 [ext_resource type="PackedScene" uid="uid://3xrqqbbp3efb" path="res://Scenes/Generators/basic_data_generator.tscn" id="1_i1nxv"]
-[ext_resource type="Texture2D" uid="uid://jaxam4u7wajp" path="res://icon.svg" id="1_okirs"]
+[ext_resource type="Texture2D" uid="uid://bw8tpgoj38hki" path="res://Assets/Sat_dish_atlas_texture.tres" id="2_i1nxv"]
 
 [resource]
 script = ExtResource("1_b3lga")
 id = "basic_sattelite_dish"
 display_name = "Basic satellite dish"
-icon = ExtResource("1_okirs")
+icon = ExtResource("2_i1nxv")
 building_scene = ExtResource("1_i1nxv")
 initially_unlocked = true
 metadata/_custom_type_script = "uid://sf8jcwrbdtyx"

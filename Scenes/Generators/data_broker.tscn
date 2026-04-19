@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c6c27obq3hbm4"]
 
 [ext_resource type="PackedScene" uid="uid://ck52276utv3bl" path="res://Scenes/Generators/BasicBuilding.tscn" id="1_eligb"]
+[ext_resource type="Texture2D" uid="uid://bphsbgs4fry2c" path="res://Assets/data_broker_atlas_texture.tres" id="2_avbgs"]
 
 [node name="BasicBuilding" unique_id=738684379 instance=ExtResource("1_eligb")]
 building_name = "Data Broker"
@@ -10,3 +11,6 @@ produces = {
 consumes = {
 "money": 10.0
 }
+
+[node name="Sprite2D" parent="." index="0" unique_id=1718190438]
+texture = ExtResource("2_avbgs")
