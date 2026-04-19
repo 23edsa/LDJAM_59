@@ -12,7 +12,27 @@ var resources: Dictionary ={
 
 func _ready():
 	update_ui_labels(resources)
+	
+func try_consume(consumes:Dictionary) -> bool:
+	for req_type in consumes.keys():
+		var req_amount = consumes[req_type]
+		if not resources.has(req_type) or resources[req_type] < req_amount:
+			return false
+	for req_type in consumes.keys():
+		resources[req_type] -= consumes[req_type]
+	update_ui_labels(resources)
+	return true
 
+func produce_resources(produces:Dictionary):
+	for prod_type in produces.keys():
+		var prod_amount = produces[prod_type]
+		if resources.has(prod_type):
+			resources[prod_type] += prod_amount
+		else: resources[prod_type] = prod_amount
+	update_ui_labels(resources)
+		
+
+#old transaction code, not used
 func process_building_transaction(consumes:Dictionary, produces:Dictionary):
 	for req_type in consumes.keys():
 		var req_amount = consumes[req_type]
@@ -20,15 +40,15 @@ func process_building_transaction(consumes:Dictionary, produces:Dictionary):
 			return #not enough of required resources
 	for req_type in consumes.keys():
 		var req_amount = consumes[req_type]
-		resources[req_type] -= req_amount
+		resources[req_type] -= req_amount 
 	
 	for prod_type in produces.keys():
 		var prod_amount = produces[prod_type]
 		if resources.has(prod_type):
 			resources[prod_type] += prod_amount
-		else: return
+		else: return 
 		
-	update_ui_labels(resources)
+	update_ui_labels(resources) #old transaction code, not used
 
 func update_ui_labels(resources):
 	

@@ -54,7 +54,8 @@ func _drop_data(at_position, data):
 		
 		if resource_manager != null:
 			new_building.resource_transaction_requested.connect(resource_manager.process_building_transaction)
-		
+			new_building.resource_manager = resource_manager
+	
 		add_child(new_building)
 		new_building.position = target_grid_pos
 		occupied_cells[target_grid_pos] = new_building
