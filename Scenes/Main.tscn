@@ -11,7 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://dbcp3x4ql3s5l" path="res://Scenes/Managers/Resource_manager.tscn" id="11_4kpch"]
 [ext_resource type="Resource" uid="uid://dgkirji3wgjyi" path="res://Scenes/Milestones/Milestone_data_broker.tres" id="12_2w5on"]
 [ext_resource type="Resource" uid="uid://c24uenhrn6jis" path="res://Scenes/Milestones/Milestone_signal_archive.tres" id="12_erwvk"]
-[ext_resource type="PackedScene" path="res://Scenes/Managers/New_level_manager.tscn" id="12_grg3l"]
+[ext_resource type="PackedScene" uid="uid://bje5xsl6q8imc" path="res://Scenes/Managers/New_level_manager.tscn" id="12_grg3l"]
+[ext_resource type="Texture2D" uid="uid://shph7xago35b" path="res://Assets/Background.png" id="13_frkhe"]
 
 [node name="Main" type="Node2D" unique_id=1727471405]
 script = ExtResource("1_idj7w")
@@ -58,6 +59,18 @@ size_flags_stretch_ratio = 7.0
 [node name="NewLevelManager" parent="MainUI/Background/MilestoneSplit/LeftSide/LevelManagerPanel" unique_id=1456458300 node_paths=PackedStringArray("resource_manager") instance=ExtResource("12_grg3l")]
 layout_mode = 2
 resource_manager = NodePath("../../ResourcePanel/ResourceManager")
+
+[node name="Control" type="Control" parent="MainUI/Background/MilestoneSplit/LeftSide/LevelManagerPanel" unique_id=1348006237]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MainUI/Background/MilestoneSplit/LeftSide/LevelManagerPanel/Control" unique_id=780015458]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_frkhe")
 
 [node name="BuildingsManagerPanel" type="PanelContainer" parent="MainUI/Background/MilestoneSplit/LeftSide" unique_id=1879855909]
 layout_mode = 2

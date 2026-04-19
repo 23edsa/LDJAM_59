@@ -12,10 +12,10 @@ func _ready():
 
 func setup(milestone):
 	my_milestone = milestone
-	$VBoxContainer/Top/HBoxContainer/RichTextLabel.text = milestone.display_name
-	$VBoxContainer/Top/HBoxContainer/TextureRect.texture = milestone.building_to_unlock.icon
-	$VBoxContainer/Bottom/Control2/HBoxContainer/Cost.text = str(milestone.resource_cost)
-	$VBoxContainer/Bottom/Control2/HBoxContainer/Currency.text = milestone.resource_type
+	$MarginContainer/VBoxContainer/Top/HBoxContainer/RichTextLabel.text = milestone.display_name
+	$MarginContainer/VBoxContainer/Top/HBoxContainer/TextureRect.texture = milestone.building_to_unlock.icon
+	$MarginContainer/VBoxContainer/Bottom/Control2/HBoxContainer/Cost.text = str(milestone.resource_cost)
+	$MarginContainer/VBoxContainer/Bottom/Control2/HBoxContainer/Currency.text = milestone.resource_type
 	resources[milestone.resource_type] = milestone.resource_cost
 
 func _process(delta):
@@ -31,12 +31,12 @@ func _on_button_pressed():
 		milestone_unlocked = true
 		unlock_requested.emit(my_milestone)
 		modulate = Color(1,1,1,1)
-		$VBoxContainer/Bottom/Control/Button.queue_free()
+		$MarginContainer/VBoxContainer/Bottom/Control/Button.queue_free()
 		var unlocked_label:Label = Label.new()
 		unlocked_label.text = "UNLOCKED"
 		unlocked_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		unlocked_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 		unlocked_label.set_anchors_preset(Control.PRESET_FULL_RECT)
-		$VBoxContainer/Bottom/Control.add_child(unlocked_label)
+		$MarginContainer/VBoxContainer/Bottom/Control.add_child(unlocked_label)
 	else: print("you dont have enough to unlock this")
 	

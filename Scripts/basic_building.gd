@@ -115,6 +115,7 @@ func _on_generator_timer_timeout():
 
 	is_working = false
 	try_start_generation()
+	AudioManager.play_sfx("pop")
 	
 
 

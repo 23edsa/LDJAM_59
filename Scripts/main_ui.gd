@@ -26,6 +26,7 @@ func _ready():
 		milestone_card.setup(milestone)
 		milestone_card.unlock_requested.connect(_on_milestone_unlock_requested)
 		milestone_card.resource_manager = resource_manager
+		AudioManager.play_bgm()
 
 func unlock_building(building:BuildingData):
 	if not unlocked_buildings.has(building):

@@ -5,6 +5,8 @@ extends Control
 var occupied_cells:Dictionary = {}
 var moving_building_data:Dictionary = {}
 
+var moving_continues:bool = false
+
 var ghost_preview:TextureRect
 var current_hovered_cell: Vector2 = Vector2(-999, -999)
 
@@ -25,6 +27,7 @@ func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 	if typeof(data) == TYPE_DICTIONARY and data.has("is_move"):
 		is_moving_building = true
 		
+		
 	if is_new_building or is_moving_building:
 		var target_grid_pos = get_grid_position(at_position)
 		
@@ -35,6 +38,9 @@ func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 		ghost_preview.size = grid_size 
 		ghost_preview.visible = true
 		ghost_preview.move_to_front() 
+		if not moving_continues:
+			AudioManager.play_sfx("pickup")
+		moving_continues = true
 		
 		# Check if the cell is blocked
 		if occupied_cells.has(target_grid_pos):
@@ -75,7 +81,8 @@ func _drop_data(at_position, data):
 		occupied_cells[target_grid_pos] = building
 		
 		moving_building_data = {}
-	
+	moving_continues = false
+	AudioManager.play_sfx("construct")
 	update_local_adjacencies(target_grid_pos)
 	ghost_preview.visible = false
 	
@@ -97,6 +104,9 @@ func _notification(what: int) -> void:
 				resource_manager.resources["money"] += building.refund_value
 			
 			building.queue_free()
+			moving_continues = false
+			AudioManager.play_sfx("deconstruct")
+
 			moving_building_data = {}
 		TooltipManager.hide_tooltip()
 			
@@ -123,6 +133,7 @@ func _get_drag_data(at_positon:Vector2):
 		return moving_building_data
 	update_local_adjacencies(grid_pos)
 	TooltipManager.hide_tooltip()
+	
 	return null
 	
 
