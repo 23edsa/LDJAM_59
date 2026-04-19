@@ -143,6 +143,20 @@ func _process(delta):
 
 func get_tooltip_text() -> String:
 	var text = "[ " + display_name + " ]\n"
+
+	var actual_time = Generator_time * current_speed_mod
+	var time_diff = round((current_speed_mod - 1.0) * 100)
+	
+	var time_diff_text = ""
+	if time_diff > 0:
+
+		time_diff_text = " (+" + str(time_diff) + "%)" 
+	elif time_diff < 0:
+
+		time_diff_text = " (" + str(time_diff) + "%)" 
+		
+	text += "\nCycle Time: " + str(snapped(actual_time, 0.01)) + "s" + time_diff_text + "\n"
+
 	
 	if not produces.is_empty():
 		text += "\nProduces:\n"
@@ -150,16 +164,16 @@ func get_tooltip_text() -> String:
 			var base_val = produces[key]
 			var actual_val = base_val * current_prod_mod
 			
-			# Calculate the percentage difference from 1.0 (base)
+
 			var perc_diff = round((current_prod_mod - 1.0) * 100)
 			
 			var diff_text = ""
 			if perc_diff > 0:
 				diff_text = " (+" + str(perc_diff) + "%)"
 			elif perc_diff < 0:
-				diff_text = " (" + str(perc_diff) + "%)" # The minus sign is automatically added by negative numbers
+				diff_text = " (" + str(perc_diff) + "%)" 
 				
-			
+
 			text += " + " + str(snapped(actual_val, 0.01)) + " " + key + diff_text + "\n"
 			
 	if not consumes.is_empty():
@@ -176,6 +190,7 @@ func get_tooltip_text() -> String:
 			elif perc_diff < 0:
 				diff_text = " (" + str(perc_diff) + "%)"
 				
+
 			text += " - " + str(snapped(actual_val, 0.01)) + " " + key + diff_text + "\n"
 			
 	if not adjacency_rules.is_empty():
@@ -185,9 +200,9 @@ func get_tooltip_text() -> String:
 			text += " > " + neighbor + ": "
 			if rules.has("prod_mod") and rules["prod_mod"] != 1.0:
 				text += "Productivity x" + str(rules["prod_mod"]) + " "
-			if rules.has("cons_mod") and rules["cons_mod"] !=1.0:
+			if rules.has("cons_mod") and rules["cons_mod"] != 1.0:
 				text += "Consumption x" + str(rules["cons_mod"]) + " "
-			if rules.has("speed_mod")and rules["speed_mod"] != 1.0:
+			if rules.has("speed_mod") and rules["speed_mod"] != 1.0:
 				text += "Speed x" + str(rules["speed_mod"])
 			text += "\n"
 			

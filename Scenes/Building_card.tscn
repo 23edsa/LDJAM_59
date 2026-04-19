@@ -16,6 +16,7 @@ my_building_data = ExtResource("2_qxp7w")
 layout_mode = 1
 offset_right = 85.0
 offset_bottom = 112.0
+mouse_filter = 2
 
 [node name="Building_name" type="Label" parent="VBoxContainer" unique_id=120425369]
 layout_mode = 2
