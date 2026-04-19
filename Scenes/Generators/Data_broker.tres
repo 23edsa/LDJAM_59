@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BuildingData" format=3 uid="uid://cbywbuf84ngip"]
+
+[ext_resource type="Script" uid="uid://sf8jcwrbdtyx" path="res://Scripts/Generators/Building_data.gd" id="1_lusbh"]
+[ext_resource type="PackedScene" uid="uid://c6c27obq3hbm4" path="res://Scenes/Generators/data_broker.tscn" id="1_sndr0"]
+[ext_resource type="Texture2D" uid="uid://jaxam4u7wajp" path="res://icon.svg" id="2_oheci"]
+
+[resource]
+script = ExtResource("1_lusbh")
+id = "data_broker"
+display_name = "Data Broker"
+icon = ExtResource("2_oheci")
+building_scene = ExtResource("1_sndr0")
+initially_unlocked = true
+metadata/_custom_type_script = "uid://sf8jcwrbdtyx"
