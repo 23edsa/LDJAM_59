@@ -13,4 +13,5 @@ consumes = {
 }
 
 [node name="Sprite2D" parent="." index="0" unique_id=1718190438]
+scale = Vector2(2, 2)
 texture = ExtResource("2_avbgs")
