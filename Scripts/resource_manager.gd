@@ -52,6 +52,6 @@ func process_building_transaction(consumes:Dictionary, produces:Dictionary):
 
 func update_ui_labels(resources):
 	
-	money_label.text = "Money: " + str(resources["money"])
-	data_label.text = "Data: " + str(resources["raw_data"])
-	power_label.text = "Power: " + str(resources["power"])
+	money_label.text = "Money: " + str(snapped(resources["money"],0.1))
+	data_label.text = "Data: " + str(snapped(resources["raw_data"],0.1))
+	power_label.text = "Power: " + str(snapped(resources["power"],0.1))

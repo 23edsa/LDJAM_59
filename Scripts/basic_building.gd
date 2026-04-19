@@ -146,12 +146,36 @@ func get_tooltip_text() -> String:
 	if not produces.is_empty():
 		text += "\nProduces:\n"
 		for key in produces.keys():
-			text += " + " + str(produces[key]) + " " + key + "\n"
+			var base_val = produces[key]
+			var actual_val = base_val * current_prod_mod
+			
+			# Calculate the percentage difference from 1.0 (base)
+			var perc_diff = round((current_prod_mod - 1.0) * 100)
+			
+			var diff_text = ""
+			if perc_diff > 0:
+				diff_text = " (+" + str(perc_diff) + "%)"
+			elif perc_diff < 0:
+				diff_text = " (" + str(perc_diff) + "%)" # The minus sign is automatically added by negative numbers
+				
+			
+			text += " + " + str(snapped(actual_val, 0.01)) + " " + key + diff_text + "\n"
 			
 	if not consumes.is_empty():
 		text += "\nConsumes:\n"
 		for key in consumes.keys():
-			text += " - " + str(consumes[key]) + " " + key + "\n"
+			var base_val = consumes[key]
+			var actual_val = base_val * current_cons_mod
+			
+			var perc_diff = round((current_cons_mod - 1.0) * 100)
+			
+			var diff_text = ""
+			if perc_diff > 0:
+				diff_text = " (+" + str(perc_diff) + "%)"
+			elif perc_diff < 0:
+				diff_text = " (" + str(perc_diff) + "%)"
+				
+			text += " - " + str(snapped(actual_val, 0.01)) + " " + key + diff_text + "\n"
 			
 	if not adjacency_rules.is_empty():
 		text += "\nAffects Neighbors:\n"
