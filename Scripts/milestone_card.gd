@@ -7,8 +7,8 @@ var milestone_unlocked:bool = false
 var resources:Dictionary = {}
 
 
-func _ready():
-	setup(my_milestone)
+#func _ready():
+	#setup(my_milestone)
 
 func setup(milestone):
 	my_milestone = milestone
