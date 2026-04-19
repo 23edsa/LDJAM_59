@@ -4,4 +4,9 @@
 
 [node name="BasicBuilding" unique_id=738684379 instance=ExtResource("1_eligb")]
 building_name = "Data Broker"
-produces = {}
+produces = {
+"raw_data": 12.0
+}
+consumes = {
+"money": 10.0
+}

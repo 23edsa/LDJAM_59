@@ -10,5 +10,4 @@ id = "data_broker"
 display_name = "Data Broker"
 icon = ExtResource("2_oheci")
 building_scene = ExtResource("1_sndr0")
-initially_unlocked = true
 metadata/_custom_type_script = "uid://sf8jcwrbdtyx"

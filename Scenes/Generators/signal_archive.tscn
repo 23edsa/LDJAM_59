@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://clrfesof8n365"]
+
+[ext_resource type="PackedScene" uid="uid://ck52276utv3bl" path="res://Scenes/Generators/BasicBuilding.tscn" id="1_iamko"]
+
+[node name="BasicBuilding" unique_id=738684379 instance=ExtResource("1_iamko")]
+building_name = "Signal Archive"
+Generator_time = 12.0
+produces = {
+"raw_data": 60.0
+}
+consumes = {
+"money": 20.0,
+"power": 80.0
+}

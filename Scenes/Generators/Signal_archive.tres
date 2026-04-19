@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BuildingData" format=3 uid="uid://cjrqtosedpo6j"]
+
+[ext_resource type="PackedScene" uid="uid://clrfesof8n365" path="res://Scenes/Generators/signal_archive.tscn" id="1_1qn66"]
+[ext_resource type="Script" uid="uid://sf8jcwrbdtyx" path="res://Scripts/Generators/Building_data.gd" id="1_f4vdd"]
+[ext_resource type="Texture2D" uid="uid://jaxam4u7wajp" path="res://icon.svg" id="2_ntisn"]
+
+[resource]
+script = ExtResource("1_f4vdd")
+id = "signal_archive"
+display_name = "Signal Archive"
+icon = ExtResource("2_ntisn")
+building_scene = ExtResource("1_1qn66")
+metadata/_custom_type_script = "uid://sf8jcwrbdtyx"

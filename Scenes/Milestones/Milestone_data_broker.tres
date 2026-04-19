@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MilestoneData" format=3 uid="uid://dgkirji3wgjyi"]
+
+[ext_resource type="Script" uid="uid://wtxo1lovjv5t" path="res://Scripts/Milestones/Milestone_data.gd" id="1_h7qr1"]
+[ext_resource type="Resource" uid="uid://cbywbuf84ngip" path="res://Scenes/Generators/Data_broker.tres" id="1_prgsu"]
+
+[resource]
+script = ExtResource("1_h7qr1")
+id = "data_broker_milestone"
+display_name = "Purchase Data Feed Access"
+resource_cost = 200
+resource_type = "raw_data"
+building_to_unlock = ExtResource("1_prgsu")
+metadata/_custom_type_script = "uid://wtxo1lovjv5t"
