@@ -37,15 +37,16 @@ func unlock_building(building:BuildingData):
 		building_card.resource_manager = resource_manager
 
 func _on_milestone_unlock_requested(milestone:MilestoneData):
-	var resource_type = milestone.resource_type
-	var cost = milestone.resource_cost
-	
-	if resource_manager.resources.has(resource_type):
-		var current_amount = resource_manager.resources[resource_type]
-
-		if current_amount >= cost:
-			resource_manager.resources[resource_type] -= cost
-			print("milestone unlocked!")
-			unlock_building(milestone.building_to_unlock)
-		else: print("not enough resources!")
-	else : push_warning("Resource type '" + resource_type + "' doesn't exist in the dictionary!")
+	#var resource_type = milestone.resource_type
+	#var cost = milestone.resource_cost
+	#
+	#if resource_manager.resources.has(resource_type):
+		#var current_amount = resource_manager.resources[resource_type]
+#
+		#if current_amount >= cost:
+			#resource_manager.resources[resource_type] -= cost
+			#print("milestone unlocked!")
+			#unlock_building(milestone.building_to_unlock)
+		#else: print("not enough resources!")
+	#else : push_warning("Resource type '" + resource_type + "' doesn't exist in the dictionary!")
+	unlock_building(milestone.building_to_unlock)

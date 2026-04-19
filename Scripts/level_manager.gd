@@ -99,6 +99,7 @@ func _notification(what: int) -> void:
 			
 		if not moving_building_data.is_empty():
 			var building = moving_building_data["node"]
+			var old_grid_pos = get_grid_position(building.position)
 			
 			if resource_manager !=null:
 				resource_manager.resources["money"] += building.refund_value
@@ -106,6 +107,8 @@ func _notification(what: int) -> void:
 			building.queue_free()
 			moving_continues = false
 			AudioManager.play_sfx("deconstruct")
+			update_local_adjacencies(old_grid_pos)
+			
 
 			moving_building_data = {}
 		TooltipManager.hide_tooltip()

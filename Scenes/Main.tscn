@@ -2,8 +2,14 @@
 
 [ext_resource type="Script" uid="uid://d0x3qobml36f2" path="res://Scripts/main.gd" id="1_idj7w"]
 [ext_resource type="Script" uid="uid://cx6yy72oonqfo" path="res://Scripts/main_ui.gd" id="2_kln2b"]
+[ext_resource type="Script" uid="uid://sf8jcwrbdtyx" path="res://Scripts/Generators/Building_data.gd" id="3_0sclb"]
+[ext_resource type="Resource" uid="uid://gwx2pc13ngnq" path="res://Scenes/Generators/Sattelite_dish.tres" id="4_sxkr1"]
+[ext_resource type="Resource" uid="uid://uvc1yfh2tgut" path="res://Scenes/Generators/Data_center.tres" id="5_fq0cl"]
+[ext_resource type="Resource" uid="uid://bcowa6f5tuqbq" path="res://Scenes/Generators/Power_generator.tres" id="6_hwpts"]
 [ext_resource type="PackedScene" uid="uid://buqyim7fora5u" path="res://Scenes/Building_card.tscn" id="7_50glp"]
 [ext_resource type="Script" uid="uid://wtxo1lovjv5t" path="res://Scripts/Milestones/Milestone_data.gd" id="7_bmxlf"]
+[ext_resource type="Resource" uid="uid://cbywbuf84ngip" path="res://Scenes/Generators/Data_broker.tres" id="7_jyqft"]
+[ext_resource type="Resource" uid="uid://cjrqtosedpo6j" path="res://Scenes/Generators/Signal_archive.tres" id="8_3tgeq"]
 [ext_resource type="Resource" uid="uid://bo6cwej2vm3x2" path="res://Scenes/Milestones/Milestone_01.tres" id="8_4kpch"]
 [ext_resource type="PackedScene" uid="uid://bg4c8rn6xo711" path="res://Scenes/Milestone_card.tscn" id="8_vy5pj"]
 [ext_resource type="Resource" uid="uid://lsa1o7wnb2od" path="res://Scenes/Milestones/Milestone_02.tres" id="9_frkhe"]
@@ -19,6 +25,7 @@ script = ExtResource("1_idj7w")
 
 [node name="MainUI" type="CanvasLayer" parent="." unique_id=1331611584]
 script = ExtResource("2_kln2b")
+all_buildings = Array[ExtResource("3_0sclb")]([ExtResource("4_sxkr1"), ExtResource("5_fq0cl"), ExtResource("6_hwpts"), ExtResource("7_jyqft"), ExtResource("8_3tgeq")])
 all_milestones = Array[ExtResource("7_bmxlf")]([ExtResource("8_4kpch"), ExtResource("9_frkhe"), ExtResource("10_1p5hy"), ExtResource("12_2w5on"), ExtResource("12_erwvk")])
 building_card_scene = ExtResource("7_50glp")
 milestone_card_scene = ExtResource("8_vy5pj")
@@ -52,6 +59,7 @@ size_flags_vertical = 3
 position = Vector2(234, 39)
 
 [node name="LevelManagerPanel" type="PanelContainer" parent="MainUI/Background/MilestoneSplit/LeftSide" unique_id=1430636456]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 7.0
@@ -62,14 +70,17 @@ resource_manager = NodePath("../../ResourcePanel/ResourceManager")
 
 [node name="Control" type="Control" parent="MainUI/Background/MilestoneSplit/LeftSide/LevelManagerPanel" unique_id=1348006237]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="TextureRect" type="TextureRect" parent="MainUI/Background/MilestoneSplit/LeftSide/LevelManagerPanel/Control" unique_id=780015458]
+z_index = -1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("13_frkhe")
 
 [node name="BuildingsManagerPanel" type="PanelContainer" parent="MainUI/Background/MilestoneSplit/LeftSide" unique_id=1879855909]

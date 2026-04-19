@@ -10,5 +10,4 @@ id = "basic_power"
 display_name = "Basic Power Generator"
 icon = ExtResource("2_d7wym")
 building_scene = ExtResource("1_wiujq")
-initially_unlocked = true
 metadata/_custom_type_script = "uid://sf8jcwrbdtyx"

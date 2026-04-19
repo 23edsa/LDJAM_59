@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://pomwnfecfj81" path="res://Scripts/TooltipManager.gd" id="1_86yj7"]
 
 [node name="TooltipManager" type="CanvasLayer" unique_id=774387738]
+layer = 100
 script = ExtResource("1_86yj7")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=684465407]
