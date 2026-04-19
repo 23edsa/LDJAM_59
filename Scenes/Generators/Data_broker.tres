@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://sf8jcwrbdtyx" path="res://Scripts/Generators/Building_data.gd" id="1_lusbh"]
 [ext_resource type="PackedScene" uid="uid://c6c27obq3hbm4" path="res://Scenes/Generators/data_broker.tscn" id="1_sndr0"]
-[ext_resource type="Texture2D" uid="uid://jaxam4u7wajp" path="res://icon.svg" id="2_oheci"]
+[ext_resource type="Texture2D" uid="uid://bphsbgs4fry2c" path="res://Assets/data_broker_atlas_texture.tres" id="2_sndr0"]
 
 [resource]
 script = ExtResource("1_lusbh")
 id = "data_broker"
 display_name = "Data Broker"
-icon = ExtResource("2_oheci")
+icon = ExtResource("2_sndr0")
 building_scene = ExtResource("1_sndr0")
 metadata/_custom_type_script = "uid://sf8jcwrbdtyx"

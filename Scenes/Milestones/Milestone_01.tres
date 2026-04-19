@@ -7,7 +7,7 @@
 script = ExtResource("1_ow6ik")
 id = "1"
 display_name = "Build a powerplant"
-resource_cost = 1000
+resource_cost = 100
 resource_type = "money"
 building_to_unlock = ExtResource("1_o4n2i")
 metadata/_custom_type_script = "uid://wtxo1lovjv5t"

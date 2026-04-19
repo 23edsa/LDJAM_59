@@ -2,10 +2,6 @@
 
 [ext_resource type="Script" uid="uid://d0x3qobml36f2" path="res://Scripts/main.gd" id="1_idj7w"]
 [ext_resource type="Script" uid="uid://cx6yy72oonqfo" path="res://Scripts/main_ui.gd" id="2_kln2b"]
-[ext_resource type="Script" uid="uid://sf8jcwrbdtyx" path="res://Scripts/Generators/Building_data.gd" id="3_v1gob"]
-[ext_resource type="Resource" uid="uid://bcowa6f5tuqbq" path="res://Scenes/Generators/Power_generator.tres" id="4_jw32o"]
-[ext_resource type="Resource" uid="uid://gwx2pc13ngnq" path="res://Scenes/Generators/Sattelite_dish.tres" id="5_50glp"]
-[ext_resource type="Resource" uid="uid://uvc1yfh2tgut" path="res://Scenes/Generators/Data_center.tres" id="6_vy5pj"]
 [ext_resource type="PackedScene" uid="uid://buqyim7fora5u" path="res://Scenes/Building_card.tscn" id="7_50glp"]
 [ext_resource type="Script" uid="uid://wtxo1lovjv5t" path="res://Scripts/Milestones/Milestone_data.gd" id="7_bmxlf"]
 [ext_resource type="Resource" uid="uid://bo6cwej2vm3x2" path="res://Scenes/Milestones/Milestone_01.tres" id="8_4kpch"]
@@ -22,7 +18,6 @@ script = ExtResource("1_idj7w")
 
 [node name="MainUI" type="CanvasLayer" parent="." unique_id=1331611584]
 script = ExtResource("2_kln2b")
-all_buildings = Array[ExtResource("3_v1gob")]([ExtResource("4_jw32o"), ExtResource("5_50glp"), ExtResource("6_vy5pj")])
 all_milestones = Array[ExtResource("7_bmxlf")]([ExtResource("8_4kpch"), ExtResource("9_frkhe"), ExtResource("10_1p5hy"), ExtResource("12_2w5on"), ExtResource("12_erwvk")])
 building_card_scene = ExtResource("7_50glp")
 milestone_card_scene = ExtResource("8_vy5pj")

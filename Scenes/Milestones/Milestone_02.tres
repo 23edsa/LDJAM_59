@@ -7,6 +7,7 @@
 script = ExtResource("1_rxuyf")
 id = "2"
 display_name = "Build a sattelite dish"
-resource_type = "money"
+resource_cost = 30
+resource_type = "power"
 building_to_unlock = ExtResource("1_i7bqc")
 metadata/_custom_type_script = "uid://wtxo1lovjv5t"

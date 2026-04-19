@@ -5,8 +5,8 @@
 
 [node name="Basic_money_generator" unique_id=738684379 instance=ExtResource("1_t25se")]
 building_name = "datacenter"
-Generator_time = 0.3
-click_boost_amount = 0.1
+Generator_time = 3.0
+click_boost_amount = 0.2
 produces = {
 "money": 10
 }

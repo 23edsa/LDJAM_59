@@ -2,12 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://clrfesof8n365" path="res://Scenes/Generators/signal_archive.tscn" id="1_1qn66"]
 [ext_resource type="Script" uid="uid://sf8jcwrbdtyx" path="res://Scripts/Generators/Building_data.gd" id="1_f4vdd"]
-[ext_resource type="Texture2D" uid="uid://jaxam4u7wajp" path="res://icon.svg" id="2_ntisn"]
+[ext_resource type="Texture2D" uid="uid://d2ns384a51j5n" path="res://Assets/signal_archive_atlas_texture.tres" id="2_1qn66"]
 
 [resource]
 script = ExtResource("1_f4vdd")
 id = "signal_archive"
 display_name = "Signal Archive"
-icon = ExtResource("2_ntisn")
+icon = ExtResource("2_1qn66")
 building_scene = ExtResource("1_1qn66")
 metadata/_custom_type_script = "uid://sf8jcwrbdtyx"
