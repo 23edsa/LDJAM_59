@@ -5,13 +5,23 @@
 
 [node name="Basic_money_generator" unique_id=738684379 instance=ExtResource("1_t25se")]
 building_name = "datacenter"
-Generator_time = 3.0
 click_boost_amount = 0.2
+adjacency_rules = {
+"Data Broker": {
+"prod_mod": 1.15
+},
+"datacenter": {
+"prod_mod": 1.3
+},
+"sattelite_dish": {
+"prod_mod": 1.2
+}
+}
 produces = {
 "money": 10
 }
 consumes = {
-"raw_data": 10
+"raw_data": 8
 }
 
 [node name="Sprite2D" parent="." index="0" unique_id=1718190438]

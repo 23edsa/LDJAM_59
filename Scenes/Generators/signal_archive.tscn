@@ -5,13 +5,24 @@
 
 [node name="BasicBuilding" unique_id=738684379 instance=ExtResource("1_iamko")]
 building_name = "Signal Archive"
-Generator_time = 12.0
+Generator_time = 10.0
+adjacency_rules = {
+"Data Broker": {
+"cons_mod": 1.15
+},
+"powerplant": {
+"cons_mod": 0.65
+},
+"sattelite_dish": {
+"prod_mod": 1.25
+}
+}
 produces = {
-"raw_data": 60.0
+"money": 30.0
 }
 consumes = {
-"money": 20.0,
-"power": 80.0
+"power": 30.0,
+"raw_data": 15.0
 }
 
 [node name="Sprite2D" parent="." index="0" unique_id=1718190438]

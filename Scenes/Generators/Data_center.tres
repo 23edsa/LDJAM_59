@@ -13,5 +13,5 @@ id = "basic_data_center"
 display_name = "Basic Data Center"
 icon = SubResource("AtlasTexture_v4dis")
 building_scene = ExtResource("1_qb0x5")
-building_cost = 50.0
+building_cost = 200.0
 metadata/_custom_type_script = "uid://sf8jcwrbdtyx"

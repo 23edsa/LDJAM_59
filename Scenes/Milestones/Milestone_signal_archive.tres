@@ -7,7 +7,7 @@
 script = ExtResource("1_5nr4y")
 id = "signal_archive_milestone"
 display_name = "Access Deep Space Archives"
-resource_cost = 200
+resource_cost = 600
 resource_type = "raw_data"
 building_to_unlock = ExtResource("1_ja012")
 metadata/_custom_type_script = "uid://wtxo1lovjv5t"

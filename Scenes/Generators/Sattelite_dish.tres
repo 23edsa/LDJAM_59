@@ -10,5 +10,4 @@ id = "basic_sattelite_dish"
 display_name = "Basic satellite dish"
 icon = ExtResource("2_i1nxv")
 building_scene = ExtResource("1_i1nxv")
-building_cost = 30.0
 metadata/_custom_type_script = "uid://sf8jcwrbdtyx"

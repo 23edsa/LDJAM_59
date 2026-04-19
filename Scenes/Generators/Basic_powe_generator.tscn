@@ -5,15 +5,14 @@
 
 [node name="BasicBuilding" unique_id=738684379 instance=ExtResource("1_gv626")]
 building_name = "powerplant"
-Generator_time = 1.0
+Generator_time = 2.0
 adjacency_rules = {
 "powerplant": {
-"prod_mod": 1.13,
-"speed_mod": 1.0
+"prod_mod": 1.15
 }
 }
 produces = {
-"power": 10.0
+"power": 5.0
 }
 
 [node name="Sprite2D" parent="." index="0" unique_id=1718190438]

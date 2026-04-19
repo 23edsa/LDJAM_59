@@ -10,4 +10,5 @@ id = "signal_archive"
 display_name = "Signal Archive"
 icon = ExtResource("2_1qn66")
 building_scene = ExtResource("1_1qn66")
+building_cost = 500.0
 metadata/_custom_type_script = "uid://sf8jcwrbdtyx"

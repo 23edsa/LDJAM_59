@@ -5,11 +5,21 @@
 
 [node name="BasicBuilding" unique_id=738684379 instance=ExtResource("1_eligb")]
 building_name = "Data Broker"
-produces = {
-"raw_data": 12.0
+Generator_time = 6.0
+adjacency_rules = {
+"Data Broker": {
+"prod_mod": 1.15
+},
+"datacenter": {
+"prod_mod": 1.3
+},
+"sattelite_dish": {
+"prod_mod": 1.5
 }
+}
+produces = {}
 consumes = {
-"money": 10.0
+"money": 8.0
 }
 
 [node name="Sprite2D" parent="." index="0" unique_id=1718190438]

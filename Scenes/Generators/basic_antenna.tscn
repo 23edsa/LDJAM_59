@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://fncleimlyws4"]
+
+[ext_resource type="PackedScene" uid="uid://ck52276utv3bl" path="res://Scenes/Generators/BasicBuilding.tscn" id="1_785tq"]
+[ext_resource type="Texture2D" uid="uid://cqakpulpr2ahd" path="res://Assets/antenna_atlast_texture.tres" id="2_xnqjw"]
+
+[node name="BasicBuilding" unique_id=738684379 instance=ExtResource("1_785tq")]
+building_name = "basic_antenna"
+Generator_time = 4.0
+produces = {}
+
+[node name="Sprite2D" parent="." index="0" unique_id=1718190438]
+texture = ExtResource("2_xnqjw")
+
+[node name="ProgressBar" parent="." index="3" unique_id=510110955]
+self_modulate = Color(1, 1, 1, 0.3372549)
+offset_left = -30.0
+offset_right = 30.0
