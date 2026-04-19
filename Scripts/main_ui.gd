@@ -25,6 +25,7 @@ func _ready():
 		milestones_container.add_child(milestone_card)
 		milestone_card.setup(milestone)
 		milestone_card.unlock_requested.connect(_on_milestone_unlock_requested)
+		milestone_card.resource_manager = resource_manager
 
 func unlock_building(building:BuildingData):
 	if not unlocked_buildings.has(building):
