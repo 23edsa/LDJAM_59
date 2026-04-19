@@ -1,14 +1,17 @@
 [gd_resource type="Resource" script_class="BuildingData" format=3 uid="uid://uvc1yfh2tgut"]
 
-[ext_resource type="Texture2D" uid="uid://jaxam4u7wajp" path="res://icon.svg" id="1_covn5"]
 [ext_resource type="Script" uid="uid://sf8jcwrbdtyx" path="res://Scripts/Generators/Building_data.gd" id="1_j2qxe"]
 [ext_resource type="PackedScene" uid="uid://qw47tltfhfh4" path="res://Scenes/Generators/basic_money_generator.tscn" id="1_qb0x5"]
+[ext_resource type="Texture2D" uid="uid://b2jueik0iwjok" path="res://Assets/data_center_atlas_texture.tres" id="2_qb0x5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4dis"]
+atlas = ExtResource("2_qb0x5")
 
 [resource]
 script = ExtResource("1_j2qxe")
 id = "basic_data_center"
 display_name = "Basic Data Center"
-icon = ExtResource("1_covn5")
+icon = SubResource("AtlasTexture_v4dis")
 building_scene = ExtResource("1_qb0x5")
 initially_unlocked = true
 metadata/_custom_type_script = "uid://sf8jcwrbdtyx"
