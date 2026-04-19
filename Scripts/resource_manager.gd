@@ -6,8 +6,8 @@ extends Node2D
 
 var resources: Dictionary ={
 	"raw_data": 10.0,
-	"money": 10.0,
-	"power": 10.0
+	"money": 500.0,
+	"power": 0.0
 }
 
 func _ready():

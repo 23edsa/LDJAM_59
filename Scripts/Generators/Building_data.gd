@@ -7,3 +7,4 @@ class_name BuildingData
 @export var icon:Texture2D
 @export var building_scene:PackedScene
 @export var initially_unlocked:bool
+@export var building_cost:float = 100

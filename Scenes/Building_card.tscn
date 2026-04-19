@@ -28,3 +28,8 @@ size_flags_vertical = 3
 texture = ExtResource("1_lk0rr")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=913589968]
+layout_mode = 2
+text = "$"
+horizontal_alignment = 1

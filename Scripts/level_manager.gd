@@ -50,12 +50,17 @@ func _drop_data(at_position, data):
 	
 	if typeof(data) == TYPE_DICTIONARY and data.has("is_new"):
 		var building_data = data["building_data"] as BuildingData
+		if resource_manager.resources["money"] < building_data.building_cost:
+			ghost_preview.visible = false
+			return
+		
+		resource_manager.resources["money"] -= building_data.building_cost
 		var new_building = building_data.building_scene.instantiate()
 		
 		if resource_manager != null:
 			new_building.resource_transaction_requested.connect(resource_manager.process_building_transaction)
 			new_building.resource_manager = resource_manager
-	
+			new_building.refund_value = building_data.building_cost
 		add_child(new_building)
 		new_building.position = target_grid_pos
 		occupied_cells[target_grid_pos] = new_building
@@ -84,6 +89,9 @@ func _notification(what: int) -> void:
 			
 		if not moving_building_data.is_empty():
 			var building = moving_building_data["node"]
+			
+			if resource_manager !=null:
+				resource_manager.resources["money"] += building.refund_value
 			
 			building.queue_free()
 			moving_building_data = {}

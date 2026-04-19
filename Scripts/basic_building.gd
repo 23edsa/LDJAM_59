@@ -11,7 +11,7 @@ class_name BasicBuilding
 @export var consumes: Dictionary = {}
 var resource_manager:Node2D
 var is_working:bool = false
-
+var refund_value:float = 0
 
 
 signal resource_transaction_requested(consume_dict:Dictionary, produce_dict:Dictionary)

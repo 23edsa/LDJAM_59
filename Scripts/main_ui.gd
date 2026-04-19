@@ -32,6 +32,7 @@ func unlock_building(building:BuildingData):
 		var building_card = building_card_scene.instantiate()
 		buildings_container.add_child(building_card)
 		building_card.setup(building)
+		building_card.resource_manager = resource_manager
 
 func _on_milestone_unlock_requested(milestone:MilestoneData):
 	var resource_type = milestone.resource_type
