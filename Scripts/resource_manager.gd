@@ -1,13 +1,20 @@
 extends Node2D
 
-@onready var money_label= $HBoxContainer/Money_Label
-@onready var data_label = $HBoxContainer/Data_Label
-@onready var power_label = $HBoxContainer/Power_Label
+@onready var money_label= $HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Money_Label
+@onready var data_label = $HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Data_Label
+@onready var power_label = $HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Power_Label
+@onready var signal_label = $HBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/Control2/Label
+@onready var endgame_goal:float = 1000000
+@onready var progress = $HBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/Control2/ProgressBar
+
+var has_won:float = false
+var victory_screen = preload("res://Scenes/VictoryScreen.tscn")
 
 var resources: Dictionary ={
 	"raw_data": 10.0,
 	"money": 600.0,
-	"power": 0.0
+	"power": 0.0,
+	"signal":0.0
 }
 
 func _ready():
@@ -55,3 +62,16 @@ func update_ui_labels(resources):
 	money_label.text = "Money: " + str(snapped(resources["money"],0.1))
 	data_label.text = "Data: " + str(snapped(resources["raw_data"],0.1))
 	power_label.text = "Power: " + str(snapped(resources["power"],0.1))
+	signal_label.text = str(snapped(resources["signal"],1)) + "/" + str(snapped(endgame_goal,1))
+	progress.value = remap(snapped(resources["signal"],1),0,endgame_goal,0,100)
+	check_win_conditions()
+
+func check_win_conditions():
+	if has_won:
+		return
+		
+	if resources["signal"] >= endgame_goal:
+		has_won = true
+		print("you win")
+		var vic_sceen = victory_screen.instantiate()
+		add_child(vic_sceen)

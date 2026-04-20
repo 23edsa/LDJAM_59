@@ -53,11 +53,21 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0
 
-[node name="ResourcePanel" type="PanelContainer" parent="MainUI/Background/MilestoneSplit/LeftSide" unique_id=1521342092]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainUI/Background/MilestoneSplit/LeftSide" unique_id=1897945717]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ResourceManager" parent="MainUI/Background/MilestoneSplit/LeftSide/ResourcePanel" unique_id=229041560 instance=ExtResource("11_4kpch")]
+[node name="Menu_options" type="PanelContainer" parent="MainUI/Background/MilestoneSplit/LeftSide/HBoxContainer" unique_id=853990662]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="ResourcePanel" type="PanelContainer" parent="MainUI/Background/MilestoneSplit/LeftSide/HBoxContainer" unique_id=1521342092]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ResourceManager" parent="MainUI/Background/MilestoneSplit/LeftSide/HBoxContainer/ResourcePanel" unique_id=229041560 instance=ExtResource("11_4kpch")]
 position = Vector2(234, 39)
 
 [node name="LevelManagerPanel" type="PanelContainer" parent="MainUI/Background/MilestoneSplit/LeftSide" unique_id=1430636456]
@@ -68,7 +78,7 @@ size_flags_stretch_ratio = 7.0
 
 [node name="NewLevelManager" parent="MainUI/Background/MilestoneSplit/LeftSide/LevelManagerPanel" unique_id=1456458300 node_paths=PackedStringArray("resource_manager") instance=ExtResource("12_grg3l")]
 layout_mode = 2
-resource_manager = NodePath("../../ResourcePanel/ResourceManager")
+resource_manager = NodePath("../../HBoxContainer/ResourcePanel/ResourceManager")
 
 [node name="Control" type="Control" parent="MainUI/Background/MilestoneSplit/LeftSide/LevelManagerPanel" unique_id=1348006237]
 layout_mode = 2

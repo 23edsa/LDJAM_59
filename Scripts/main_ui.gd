@@ -7,7 +7,7 @@ extends CanvasLayer
 @export var milestone_card_scene:PackedScene
 
 #Probably would want to initialize resources here as well
-@onready var resource_manager = $Background/MilestoneSplit/LeftSide/ResourcePanel/ResourceManager
+@onready var resource_manager = $Background/MilestoneSplit/LeftSide/HBoxContainer/ResourcePanel/ResourceManager
 
 var unlocked_buildings:Array[BuildingData] = []
 

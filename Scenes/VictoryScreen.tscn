@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://bdk43hsoxnbmb"]
+
+[ext_resource type="Script" uid="uid://duuw37dv1epri" path="res://Scripts/victory_screen.gd" id="1_2n4xq"]
+
+[node name="VictoryScreen" type="CanvasLayer" unique_id=851803971]
+layer = 250
+script = ExtResource("1_2n4xq")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1535177228]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0627451, 0.0627451, 0.0627451, 0.64705884)
+
+[node name="PanelContainer" type="PanelContainer" parent="ColorRect" unique_id=1786653007]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 259.0
+offset_right = 931.0
+offset_bottom = 455.0
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/PanelContainer" unique_id=201681188]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/PanelContainer/MarginContainer" unique_id=200002143]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="ColorRect/PanelContainer/MarginContainer/VBoxContainer" unique_id=465824559]
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 1.29
+text = "FIRST CONTACT ESTABLISHED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ColorRect/PanelContainer/MarginContainer/VBoxContainer" unique_id=1328520002]
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 2.94
+text = "Congratulations, you have successfully deciphered the deep space signal and established the first contact!
+
+Thank you for playing."
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="ColorRect/PanelContainer/MarginContainer/VBoxContainer" unique_id=1020724383]
+layout_mode = 2
+text = "Continue Playing"
+
+[connection signal="pressed" from="ColorRect/PanelContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

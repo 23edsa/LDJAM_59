@@ -6,29 +6,93 @@
 script = ExtResource("1_e2jj5")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1441814083]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -118.0
-offset_top = -11.5
-offset_right = 501.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = -232.0
+offset_top = -48.0
+offset_right = 456.0
+offset_bottom = 39.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Data_Label" type="Label" parent="HBoxContainer" unique_id=1217239303]
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer" unique_id=1951930961]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/PanelContainer" unique_id=1908434299]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/PanelContainer/MarginContainer" unique_id=2052421015]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Data_Label" type="Label" parent="HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1217239303]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Raw data: 0"
 
-[node name="Money_Label" type="Label" parent="HBoxContainer" unique_id=1063718185]
+[node name="Money_Label" type="Label" parent="HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1063718185]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Money: 0"
 
-[node name="Power_Label" type="Label" parent="HBoxContainer" unique_id=326821905]
+[node name="Power_Label" type="Label" parent="HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=326821905]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Power: 0"
+
+[node name="PanelContainer2" type="PanelContainer" parent="HBoxContainer" unique_id=1583409663]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/PanelContainer2" unique_id=1140971585]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/PanelContainer2/MarginContainer" unique_id=708030239]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="HBoxContainer/PanelContainer2/MarginContainer/VBoxContainer" unique_id=702516470]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/Control" unique_id=1565316825]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Deep space signal decipher progress"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control2" type="Control" parent="HBoxContainer/PanelContainer2/MarginContainer/VBoxContainer" unique_id=1508243026]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/Control2" unique_id=798365056]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+value = 36.12
+show_percentage = false
+
+[node name="Label" type="Label" parent="HBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/Control2" unique_id=658286274]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "69420/900000"
+horizontal_alignment = 1
+vertical_alignment = 1
