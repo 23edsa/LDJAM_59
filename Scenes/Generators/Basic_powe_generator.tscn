@@ -7,6 +7,12 @@
 building_name = "powerplant"
 Generator_time = 2.0
 adjacency_rules = {
+"Signal Archive": {
+"prod_mod": 0.8
+},
+"datacenter": {
+"prod_mod": 0.8
+},
 "powerplant": {
 "prod_mod": 1.15
 }

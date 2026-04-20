@@ -7,18 +7,21 @@
 building_name = "First Contact"
 Generator_time = 15.0
 adjacency_rules = {
+"Signal Archive": {
+"cons_mod": 1.2
+},
 "datacenter": {
-"cons_mod": 0.9
+"cons_mod": 1.5
 },
 "powerplant": {
-"cons_mod": 0.85
+"prod_mod": 1.2
 },
 "sattelite_dish": {
-"cons_mod": 0.8
+"cons_mod": 1.2
 }
 }
 produces = {
-"signal": 10.0
+"signal": 100.0
 }
 consumes = {
 "money": 60.0,

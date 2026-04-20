@@ -10,8 +10,8 @@ adjacency_rules = {
 "Data Broker": {
 "cons_mod": 0.8
 },
-"First Contact": {
-"cons_mod": 0.8
+"Signal Archive": {
+"speed_mod": 1.2
 },
 "datacenter": {
 "cons_mod": 1.18
