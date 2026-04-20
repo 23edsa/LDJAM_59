@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://bje5xsl6q8imc" path="res://Scenes/Managers/New_level_manager.tscn" id="12_grg3l"]
 [ext_resource type="Texture2D" uid="uid://shph7xago35b" path="res://Assets/Background.png" id="13_frkhe"]
 [ext_resource type="Resource" uid="uid://cy76monpj4jtm" path="res://Scenes/Milestones/Milestone_First_Contact.tres" id="16_hwpts"]
+[ext_resource type="PackedScene" uid="uid://pr6t4ung6hya" path="res://Scenes/Audio_contol.tscn" id="19_hwpts"]
 
 [node name="Main" type="Node2D" unique_id=1727471405]
 script = ExtResource("1_idj7w")
@@ -60,7 +61,9 @@ size_flags_vertical = 3
 [node name="Menu_options" type="PanelContainer" parent="MainUI/Background/MilestoneSplit/LeftSide/HBoxContainer" unique_id=853990662]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.1
+size_flags_stretch_ratio = 0.15
+
+[node name="AudioContol" parent="MainUI/Background/MilestoneSplit/LeftSide/HBoxContainer/Menu_options" unique_id=801738762 instance=ExtResource("19_hwpts")]
 
 [node name="ResourcePanel" type="PanelContainer" parent="MainUI/Background/MilestoneSplit/LeftSide/HBoxContainer" unique_id=1521342092]
 layout_mode = 2

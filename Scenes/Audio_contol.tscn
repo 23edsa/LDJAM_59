@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://pr6t4ung6hya"]
+
+[ext_resource type="Script" uid="uid://jcdo4mmva5e0" path="res://Scripts/audio_contol.gd" id="1_h714w"]
+
+[node name="AudioContol" type="CanvasLayer" unique_id=801738762]
+layer = 2
+script = ExtResource("1_h714w")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1081101561]
+offset_right = 56.0
+offset_bottom = 64.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1005235941]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1973177225]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Music/SFX"
+horizontal_alignment = 1
+
+[node name="Music_volume" type="HScrollBar" parent="MarginContainer/VBoxContainer" unique_id=160205632]
+layout_mode = 2
+value = 50.0
+
+[node name="SFX_volume" type="HScrollBar" parent="MarginContainer/VBoxContainer" unique_id=99434372]
+layout_mode = 2
+value = 50.0
+
+[node name="CheckButton" type="CheckButton" parent="MarginContainer/VBoxContainer" unique_id=578563858]
+layout_mode = 2
+text = "Mute"
+
+[node name="Panel" type="Panel" parent="." unique_id=2034213959]
+visible = false
+z_index = -1
+offset_right = 69.0
+offset_bottom = 77.0
+mouse_filter = 2
+
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Music_volume" to="." method="_on_music_volume_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/SFX_volume" to="." method="_on_sfx_volume_value_changed"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/CheckButton" to="." method="_on_check_button_toggled"]
