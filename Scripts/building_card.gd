@@ -64,7 +64,7 @@ func _on_mouse_entered():
 			text += " - " + str(temp.consumes[key]) + " " + key + "\n"
 			
 	if not temp.adjacency_rules.is_empty():
-		text += "\nAffects Neighbors:\n"
+		text += "\nAffected by these neighbors:\n"
 		for neighbor in temp.adjacency_rules.keys():
 			var rules = temp.adjacency_rules[neighbor]
 			text += " > " + neighbor + ": "
