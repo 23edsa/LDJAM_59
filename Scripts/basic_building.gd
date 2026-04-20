@@ -194,7 +194,7 @@ func get_tooltip_text() -> String:
 			text += " - " + str(snapped(actual_val, 0.01)) + " " + key + diff_text + "\n"
 			
 	if not adjacency_rules.is_empty():
-		text += "\nAffects Neighbors:\n"
+		text += "\nAffected by these neighbors:\n"
 		for neighbor in adjacency_rules.keys():
 			var rules = adjacency_rules[neighbor]
 			text += " > " + neighbor + ": "

@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_5nr4y")
 id = "signal_archive_milestone"
-display_name = "Access Deep Space Archives"
+display_name = "Sells Data and supports adjacent buildings"
 resource_cost = 350
 resource_type = "raw_data"
 building_to_unlock = ExtResource("1_ja012")

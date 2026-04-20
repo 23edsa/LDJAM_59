@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_rxuyf")
 id = "2"
-display_name = "Build a sattelite dish"
+display_name = "Converts incoming space signal into Data"
 resource_cost = 300
 resource_type = "power"
 building_to_unlock = ExtResource("1_i7bqc")

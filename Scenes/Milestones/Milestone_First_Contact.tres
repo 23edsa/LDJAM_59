@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_tn21a")
 id = "First Contact"
-display_name = "First Contact"
+display_name = "Establishes the signal for the First Contact"
 resource_cost = 500
 resource_type = "raw_data"
 building_to_unlock = ExtResource("1_sf00a")
