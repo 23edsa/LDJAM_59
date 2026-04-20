@@ -8,29 +8,42 @@
 layout_mode = 3
 anchors_preset = 0
 size_flags_horizontal = 3
-size_flags_vertical = 3
 script = ExtResource("1_tdalb")
 my_building_data = ExtResource("2_qxp7w")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=493827966]
-layout_mode = 1
-offset_right = 85.0
-offset_bottom = 112.0
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=454297430]
+layout_mode = 0
+offset_right = 124.0
+offset_bottom = 153.0
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=493827966]
+layout_mode = 2
 mouse_filter = 2
 
-[node name="Building_name" type="Label" parent="VBoxContainer" unique_id=120425369]
+[node name="Building_name" type="Label" parent="MarginContainer/VBoxContainer" unique_id=120425369]
 layout_mode = 2
 text = "Name"
 horizontal_alignment = 1
+autowrap_mode = 2
 
-[node name="Building_icon" type="TextureRect" parent="VBoxContainer" unique_id=1116128269]
+[node name="Building_icon" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=1116128269]
 layout_mode = 2
 size_flags_vertical = 3
 texture = ExtResource("1_lk0rr")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="VBoxContainer" unique_id=913589968]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=913589968]
 layout_mode = 2
 text = "$"
 horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="." unique_id=285152716]
+z_index = -1
+layout_mode = 0
+offset_top = 1.0
+offset_right = 124.0
+offset_bottom = 152.0
+mouse_filter = 2
