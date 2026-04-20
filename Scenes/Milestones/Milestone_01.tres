@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_ow6ik")
 id = "1"
-display_name = "Build a powerplant"
+display_name = "Generates Power"
 resource_cost = 50
 resource_type = "money"
 building_to_unlock = ExtResource("1_o4n2i")

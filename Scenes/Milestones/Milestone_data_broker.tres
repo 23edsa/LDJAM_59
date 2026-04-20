@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_h7qr1")
 id = "data_broker_milestone"
-display_name = "Purchase Data Feed Access"
+display_name = "Reduces adjacent buildings consumption"
 resource_cost = 200
 resource_type = "raw_data"
 building_to_unlock = ExtResource("1_prgsu")
