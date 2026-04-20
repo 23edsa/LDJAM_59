@@ -6,7 +6,7 @@ extends Node2D
 
 var resources: Dictionary ={
 	"raw_data": 10.0,
-	"money": 1500.0,
+	"money": 600.0,
 	"power": 0.0
 }
 

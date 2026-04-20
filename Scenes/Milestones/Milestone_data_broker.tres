@@ -7,7 +7,7 @@
 script = ExtResource("1_h7qr1")
 id = "data_broker_milestone"
 display_name = "Purchase Data Feed Access"
-resource_cost = 400
-resource_type = "money"
+resource_cost = 200
+resource_type = "raw_data"
 building_to_unlock = ExtResource("1_prgsu")
 metadata/_custom_type_script = "uid://wtxo1lovjv5t"

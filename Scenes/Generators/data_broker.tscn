@@ -5,13 +5,11 @@
 
 [node name="BasicBuilding" unique_id=738684379 instance=ExtResource("1_eligb")]
 building_name = "Data Broker"
-Generator_time = 6.0
 adjacency_rules = {
 "Data Broker": {
 "cons_mod": 0.8
 },
 "sattelite_dish": {
-"": 0.0,
 "cons_mod": 0.8
 }
 }

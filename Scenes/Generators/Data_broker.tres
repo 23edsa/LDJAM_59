@@ -10,5 +10,5 @@ id = "data_broker"
 display_name = "Data Broker"
 icon = ExtResource("2_sndr0")
 building_scene = ExtResource("1_sndr0")
-building_cost = 250.0
+building_cost = 150.0
 metadata/_custom_type_script = "uid://sf8jcwrbdtyx"

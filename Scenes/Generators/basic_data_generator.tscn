@@ -5,13 +5,10 @@
 
 [node name="Basic_Data_generator" unique_id=738684379 instance=ExtResource("1_es0l0")]
 building_name = "sattelite_dish"
-Generator_time = 6.0
+Generator_time = 4.5
 adjacency_rules = {
 "Data Broker": {
 "cons_mod": 0.8
-},
-"Signal Archive": {
-"prod_mod": 1.2
 },
 "datacenter": {
 "cons_mod": 1.18
