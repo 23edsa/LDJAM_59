@@ -14,8 +14,11 @@ adjacency_rules = {
 "cons_mod": 0.85
 },
 "sattelite_dish": {
-"cons_mod": 0.9
+"cons_mod": 0.8
 }
+}
+produces = {
+"signal": 10.0
 }
 consumes = {
 "money": 60.0,

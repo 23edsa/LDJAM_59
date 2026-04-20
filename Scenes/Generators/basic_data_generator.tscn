@@ -10,6 +10,9 @@ adjacency_rules = {
 "Data Broker": {
 "cons_mod": 0.8
 },
+"First Contact": {
+"cons_mod": 0.8
+},
 "datacenter": {
 "cons_mod": 1.18
 },
