@@ -12,6 +12,7 @@
 [ext_resource type="Resource" uid="uid://cjrqtosedpo6j" path="res://Scenes/Generators/Signal_archive.tres" id="8_3tgeq"]
 [ext_resource type="Resource" uid="uid://bo6cwej2vm3x2" path="res://Scenes/Milestones/Milestone_01.tres" id="8_4kpch"]
 [ext_resource type="PackedScene" uid="uid://bg4c8rn6xo711" path="res://Scenes/Milestone_card.tscn" id="8_vy5pj"]
+[ext_resource type="Resource" uid="uid://bcsrv4pxlalac" path="res://Scenes/Generators/First_contact.tres" id="9_fq0cl"]
 [ext_resource type="Resource" uid="uid://lsa1o7wnb2od" path="res://Scenes/Milestones/Milestone_02.tres" id="9_frkhe"]
 [ext_resource type="Resource" uid="uid://dl8socjmaldus" path="res://Scenes/Milestones/Milestone_03.tres" id="10_1p5hy"]
 [ext_resource type="PackedScene" uid="uid://dbcp3x4ql3s5l" path="res://Scenes/Managers/Resource_manager.tscn" id="11_4kpch"]
@@ -19,14 +20,15 @@
 [ext_resource type="Resource" uid="uid://c24uenhrn6jis" path="res://Scenes/Milestones/Milestone_signal_archive.tres" id="12_erwvk"]
 [ext_resource type="PackedScene" uid="uid://bje5xsl6q8imc" path="res://Scenes/Managers/New_level_manager.tscn" id="12_grg3l"]
 [ext_resource type="Texture2D" uid="uid://shph7xago35b" path="res://Assets/Background.png" id="13_frkhe"]
+[ext_resource type="Resource" uid="uid://cy76monpj4jtm" path="res://Scenes/Milestones/Milestone_First_Contact.tres" id="16_hwpts"]
 
 [node name="Main" type="Node2D" unique_id=1727471405]
 script = ExtResource("1_idj7w")
 
 [node name="MainUI" type="CanvasLayer" parent="." unique_id=1331611584]
 script = ExtResource("2_kln2b")
-all_buildings = Array[ExtResource("3_0sclb")]([ExtResource("4_sxkr1"), ExtResource("5_fq0cl"), ExtResource("6_hwpts"), ExtResource("7_jyqft"), ExtResource("8_3tgeq")])
-all_milestones = Array[ExtResource("7_bmxlf")]([ExtResource("8_4kpch"), ExtResource("9_frkhe"), ExtResource("10_1p5hy"), ExtResource("12_2w5on"), ExtResource("12_erwvk")])
+all_buildings = Array[ExtResource("3_0sclb")]([ExtResource("4_sxkr1"), ExtResource("5_fq0cl"), ExtResource("6_hwpts"), ExtResource("7_jyqft"), ExtResource("8_3tgeq"), ExtResource("9_fq0cl")])
+all_milestones = Array[ExtResource("7_bmxlf")]([ExtResource("8_4kpch"), ExtResource("9_frkhe"), ExtResource("10_1p5hy"), ExtResource("12_2w5on"), ExtResource("12_erwvk"), ExtResource("16_hwpts")])
 building_card_scene = ExtResource("7_50glp")
 milestone_card_scene = ExtResource("8_vy5pj")
 

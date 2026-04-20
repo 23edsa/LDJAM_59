@@ -8,13 +8,11 @@ building_name = "Data Broker"
 Generator_time = 6.0
 adjacency_rules = {
 "Data Broker": {
-"prod_mod": 1.15
-},
-"datacenter": {
-"prod_mod": 1.3
+"cons_mod": 0.8
 },
 "sattelite_dish": {
-"prod_mod": 1.5
+"": 0.0,
+"cons_mod": 0.8
 }
 }
 produces = {}

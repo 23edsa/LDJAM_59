@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MilestoneData" format=3 uid="uid://cy76monpj4jtm"]
+
+[ext_resource type="Resource" uid="uid://bcsrv4pxlalac" path="res://Scenes/Generators/First_contact.tres" id="1_sf00a"]
+[ext_resource type="Script" uid="uid://wtxo1lovjv5t" path="res://Scripts/Milestones/Milestone_data.gd" id="1_tn21a"]
+
+[resource]
+script = ExtResource("1_tn21a")
+id = "First Contact"
+display_name = "First Contact"
+resource_cost = 800
+resource_type = "power"
+building_to_unlock = ExtResource("1_sf00a")
+metadata/_custom_type_script = "uid://wtxo1lovjv5t"

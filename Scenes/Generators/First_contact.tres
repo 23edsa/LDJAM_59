@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BuildingData" format=3 uid="uid://bcsrv4pxlalac"]
+
+[ext_resource type="PackedScene" uid="uid://bp87dndk3555u" path="res://Scenes/Generators/first_contact.tscn" id="1_2p0ea"]
+[ext_resource type="Script" uid="uid://sf8jcwrbdtyx" path="res://Scripts/Generators/Building_data.gd" id="1_g2v6e"]
+[ext_resource type="Texture2D" uid="uid://he0fah7mthh5" path="res://Assets/first_contact_atlas_texture.tres" id="2_nnxp4"]
+
+[resource]
+script = ExtResource("1_g2v6e")
+id = "First Contact"
+display_name = "First Contact"
+icon = ExtResource("2_nnxp4")
+building_scene = ExtResource("1_2p0ea")
+building_cost = 800.0
+metadata/_custom_type_script = "uid://sf8jcwrbdtyx"

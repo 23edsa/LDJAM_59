@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bp87dndk3555u"]
+
+[ext_resource type="PackedScene" uid="uid://ck52276utv3bl" path="res://Scenes/Generators/BasicBuilding.tscn" id="1_n0018"]
+[ext_resource type="Texture2D" uid="uid://he0fah7mthh5" path="res://Assets/first_contact_atlas_texture.tres" id="2_3j7pw"]
+
+[node name="BasicBuilding" unique_id=738684379 instance=ExtResource("1_n0018")]
+building_name = "First Contact"
+Generator_time = 15.0
+adjacency_rules = {
+"datacenter": {
+"cons_mod": 0.9
+},
+"powerplant": {
+"cons_mod": 0.85
+},
+"sattelite_dish": {
+"cons_mod": 0.9
+}
+}
+consumes = {
+"money": 60.0,
+"power": 30.0,
+"raw_data": 30.0
+}
+
+[node name="Sprite2D" parent="." index="0" unique_id=1718190438]
+scale = Vector2(2, 2)
+texture = ExtResource("2_3j7pw")

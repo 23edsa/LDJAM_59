@@ -10,6 +10,9 @@ adjacency_rules = {
 "Data Broker": {
 "cons_mod": 1.15
 },
+"Signal Archive": {
+"prod_mod": 1.2
+},
 "powerplant": {
 "cons_mod": 0.65
 },
