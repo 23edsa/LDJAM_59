@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bg4c8rn6xo711"]
 
-[ext_resource type="Texture2D" uid="uid://jaxam4u7wajp" path="res://icon.svg" id="1_7ht2n"]
 [ext_resource type="Script" uid="uid://2p2wfxviq5tn" path="res://Scripts/milestone_card.gd" id="1_y5nrr"]
 [ext_resource type="Resource" uid="uid://bo6cwej2vm3x2" path="res://Scenes/Milestones/Milestone_01.tres" id="2_0vaso"]
+[ext_resource type="Texture2D" uid="uid://fx0het3sdby1" path="res://Assets/power_generator_atlas_texture.tres" id="3_0vaso"]
 
 [node name="MilestoneCard" type="Control" unique_id=1016151406]
 layout_mode = 3
@@ -16,7 +16,7 @@ my_milestone = ExtResource("2_0vaso")
 layout_mode = 0
 offset_left = 21.0
 offset_right = 250.0
-offset_bottom = 170.0
+offset_bottom = 108.0
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
@@ -35,10 +35,8 @@ size_flags_horizontal = 3
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Top/HBoxContainer" unique_id=606507812]
 layout_mode = 2
-size_flags_horizontal = 3
-texture = ExtResource("1_7ht2n")
-expand_mode = 1
-stretch_mode = 5
+texture = ExtResource("3_0vaso")
+stretch_mode = 4
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/Top/HBoxContainer" unique_id=461976156]
 layout_mode = 2
@@ -48,8 +46,7 @@ theme_override_font_sizes/bold_font_size = 14
 theme_override_font_sizes/bold_italics_font_size = 14
 theme_override_font_sizes/italics_font_size = 14
 theme_override_font_sizes/mono_font_size = 14
-text = "This is a milestone description
-"
+text = "This is a milestone description"
 
 [node name="Bottom" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=705218107]
 layout_mode = 2
@@ -66,20 +63,44 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -2.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Bottom/Control2/HBoxContainer" unique_id=593378258]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Bottom/Control2/HBoxContainer" unique_id=205260789]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.95
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Bottom/Control2/HBoxContainer/VBoxContainer" unique_id=593378258]
+layout_mode = 2
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.95
 theme_override_font_sizes/font_size = 14
 text = "Cost:"
 
-[node name="Cost" type="Label" parent="MarginContainer/VBoxContainer/Bottom/Control2/HBoxContainer" unique_id=626308114]
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/Bottom/Control2/HBoxContainer/VBoxContainer" unique_id=5356226]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Bottom/Control2/HBoxContainer/VBoxContainer/Control" unique_id=775369658]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -14.0
+offset_right = 41.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Cost" type="Label" parent="MarginContainer/VBoxContainer/Bottom/Control2/HBoxContainer/VBoxContainer/Control/HBoxContainer" unique_id=626308114]
 layout_mode = 2
 theme_override_font_sizes/font_size = 14
 text = "100"
 
-[node name="Currency" type="Label" parent="MarginContainer/VBoxContainer/Bottom/Control2/HBoxContainer" unique_id=614190506]
+[node name="Currency" type="Label" parent="MarginContainer/VBoxContainer/Bottom/Control2/HBoxContainer/VBoxContainer/Control/HBoxContainer" unique_id=614190506]
 layout_mode = 2
 theme_override_font_sizes/font_size = 14
 text = "money"
@@ -97,5 +118,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Unlock"
+
+[node name="Panel" type="Panel" parent="." unique_id=47645687]
+z_index = -1
+layout_mode = 0
+offset_top = -8.0
+offset_right = 275.0
+offset_bottom = 116.0
+mouse_filter = 2
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Bottom/Control/Button" to="." method="_on_button_pressed"]

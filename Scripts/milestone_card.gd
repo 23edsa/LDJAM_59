@@ -14,9 +14,22 @@ func setup(milestone):
 	my_milestone = milestone
 	$MarginContainer/VBoxContainer/Top/HBoxContainer/RichTextLabel.text = milestone.display_name
 	$MarginContainer/VBoxContainer/Top/HBoxContainer/TextureRect.texture = milestone.building_to_unlock.icon
-	$MarginContainer/VBoxContainer/Bottom/Control2/HBoxContainer/Cost.text = str(milestone.resource_cost)
-	$MarginContainer/VBoxContainer/Bottom/Control2/HBoxContainer/Currency.text = milestone.resource_type
+	$MarginContainer/VBoxContainer/Bottom/Control2/HBoxContainer/VBoxContainer/Control/HBoxContainer/Cost.text = str(milestone.resource_cost)
+	$MarginContainer/VBoxContainer/Bottom/Control2/HBoxContainer/VBoxContainer/Control/HBoxContainer/Currency.text = get_currency(milestone.resource_type)
 	resources[milestone.resource_type] = milestone.resource_cost
+
+func get_currency(resource_type):
+	var new_resource_type:String
+	if resource_type == "raw_data": 
+		new_resource_type = "Data"
+	if resource_type == "money": 
+		new_resource_type = "$"
+	if resource_type == "power": 
+		new_resource_type = "Power"
+	if resource_type == "signal": 
+		new_resource_type = "Signal"
+	
+	return new_resource_type
 
 func _process(delta):
 	if not milestone_unlocked:
