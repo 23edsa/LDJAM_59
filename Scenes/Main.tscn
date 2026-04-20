@@ -68,7 +68,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="ResourceManager" parent="MainUI/Background/MilestoneSplit/LeftSide/HBoxContainer/ResourcePanel" unique_id=229041560 instance=ExtResource("11_4kpch")]
-position = Vector2(234, 39)
+position = Vector2(234, 46)
 
 [node name="LevelManagerPanel" type="PanelContainer" parent="MainUI/Background/MilestoneSplit/LeftSide" unique_id=1430636456]
 self_modulate = Color(1, 1, 1, 0)
